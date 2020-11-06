@@ -1,2 +1,2 @@
-# Py_work
-my work little python script.
+## note
+`mongoexport -d futou -c merge_futou -o futou.json`
