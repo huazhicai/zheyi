@@ -5,7 +5,7 @@ import re
 import requests
 from lxml import etree
 from config.base_config import user_agent
-from config.utils import quchong, filter_data
+from utils.util import quchong, filter_data
 
 headers = {'User-Agent': random.choice(user_agent)}
 

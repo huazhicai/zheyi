@@ -223,3 +223,12 @@
 [2020-11-05 21:38:32] INFO [xuetou:157] 25461 Save to mongo successfully!
 [2020-11-05 21:38:37] INFO [xuetou:157] 17519 Save to mongo successfully!
 [2020-11-18 11:00:20] INFO [new_his:40] µÇÂ¼Ê§°Ü {'code': 4002, 'message': 'not login', 'body': {'login_mark': 'ÓÃ»§Ãû»òÃÜÂë´íÎó'}}
+[2020-11-19 16:50:07] INFO [xuetou:203] Start
+[2020-11-19 16:51:05] INFO [xuetou:203] Start
+[2020-11-19 16:52:19] INFO [xuetou:203] Start
+[2020-11-19 16:53:04] INFO [xuetou:203] Start
+[2020-11-19 16:59:41] INFO [xuetou:202] Start
+[2020-11-19 17:00:08] INFO [xuetou:202] Start
+[2020-11-19 17:01:08] INFO [xuetou:202] Start
+[2020-11-19 17:08:55] INFO [xuetou:202] Start
+[2020-11-19 17:21:30] INFO [xuetou:202] Start

@@ -5,7 +5,7 @@ from lxml import etree
 import requests
 from datetime import datetime
 from config.base_config import user_agent
-from config.utils import filter_data
+from utils.util import filter_data
 
 headers = {'User-Agent': random.choice(user_agent)}
 

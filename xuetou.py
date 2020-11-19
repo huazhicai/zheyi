@@ -1,21 +1,22 @@
 # -*- coding: utf-8 -*-
 import decimal
 import json
+import threading
+from concurrent.futures import ThreadPoolExecutor, ALL_COMPLETED, wait, as_completed
+
 import time
-
 from datetime import datetime
-from multiprocessing.pool import Pool
-
 from config.base_config import *
 from config.xue_config import *
 from data_structure.singleton_structure_content import new_content
 from huayan import HuayanData
 from lis_new import LisData
 from menzhen import MenZhenData
+from new_his import NewHis
 from yihui import YihuiSystem
 from yingxiang import YingXiang
 from zhuyuan import HisSystem
-from config.logger import getLogger
+from utils.logger import getLogger
 import warnings
 import pymongo
 
@@ -159,10 +160,9 @@ def save_to_mongo(data):
         logger.info('%s Data save mongo Failed!' % data['_id'])
 
 
-def main(pid):
-    xuetou = XueTouData(connect)
-    content, base_info = xuetou.start(pid)
-    #
+def main(pid, base_info, content):
+    print("%s threading is %s" % (threading.current_thread().name, pid))
+
     huayan = HuayanData().start(pid)
     content = data_merge(content, huayan)
 
@@ -175,6 +175,9 @@ def main(pid):
     zhuyuan = HisSystem().start(base_info)
     content = data_merge(content, zhuyuan)
 
+    new_his = NewHis(base_info).start()
+    content = data_merge(content, new_his)
+
     menzhen = MenZhenData(base_info).get_detail_data()
     content = data_merge(content, menzhen)
 
@@ -183,44 +186,27 @@ def main(pid):
 
     lis_data = LisData(base_info, jianyan_config).start()
     if lis_data: data.update(lis_data)
-    save_to_mongo(data)
+    print(data)
+    # save_to_mongo(data)
 
 
-def get_patients_id():
-    collect = db.update_reference
-    update_time = collect.find_one({'_id': system_tag_id}).get('update_time')
-    init_time = collect.find_one({'_id': system_tag_id}).get('init_time')
-    assert update_time
-    if update_time == init_time:
-        sql = 'select id from Patient'
-    else:
-        sql = "select id from Patient where modify_time > '{}' ".format(update_time)
-    cursor.execute(sql)
-    row = cursor.fetchone()
-    ids = []
-    while row:
-        ids.append(int(row[0]))
-        row = cursor.fetchone()
-    return ids
+def multi_thread(id_list):
+    with ThreadPoolExecutor(max_workers=12) as executor:
+        logger.info('Start')
+        task_list = []
+        for pid in xuetou_50:
+            xuetou = XueTouData(connect)
+            content, base_info = xuetou.start(pid)
 
-
-def scheduler():
-    pool = Pool(8)
-    while True:
-        ids = get_patients_id()
-        if ids:
-            logger.info('Starting crawler!')
-            record_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            record_time = '2020-11-04 21:29:20'
-            pool.map(main, ids)
-            pool.close()
-            pool.join()
-            collect = db.update_reference
-            collect.update_one({'_id': system_tag_id}, {'$set': {'update_time': record_time}}, upsert=True)
-            logger.info('crawler end!')
-        time.sleep(3)
+            task = executor.submit(main, pid, base_info, content)
+            task_list.append(task)
+        for future in as_completed(task_list):
+            data = future.result()
+            print('*' * 50)
+        logger.info('End')
 
 
 if __name__ == '__main__':
-    # main(20614)
-    scheduler()
+    xuetou = XueTouData(connect)
+    content, base_info = xuetou.start('45')
+    main('45', base_info, content)

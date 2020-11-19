@@ -7,8 +7,8 @@ from lxml import etree
 from datetime import datetime
 
 from config.base_config import user_agent
-from config.utils import filter_data
-from config.logger import getLogger
+from utils.util import filter_data
+from utils.logger import getLogger
 from data_structure.singleton_structure_content import new_content
 
 logger = getLogger('zhuyuan')

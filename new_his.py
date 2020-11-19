@@ -1,11 +1,9 @@
 # 在requests headers中，禁用删除If - Modified-Since 和If-None-Natch 这两项
-import re
 
-import execjs
 import requests
-from config.logger import getLogger
-from config.crack_password import crack_pwd
-from config.utils import filter_data, quchong
+from utils.logger import getLogger
+from utils.crack_password import crack_pwd
+from utils.util import filter_data, quchong
 
 logger = getLogger('new_his')
 
@@ -49,6 +47,7 @@ class NewHis(object):
         self.user = '10357'
         self.password = '123456'
         self.host = 'http://his.zheyi.com'
+        login()
 
         assert ACCESS_TOKEN
         self.authorize = {'Authorization': 'Bearer {}'.format(ACCESS_TOKEN),
@@ -236,39 +235,38 @@ class NewHis(object):
             })
 
             nurse_content = item['usageName']
-            if nurse_content:
-                if '口服' in nurse_content:
-                    koufu.append({
-                        30501: item['exeTime'],
-                        30502: item['orderName'],
-                        30503: item['specification'],
-                        30504: item['onceDosage'],
-                        30505: item['frequencyName'],
-                        30506: item['usageName'],
-                        30507: item['totalNumUnit'],
-                        30508: 3,
-                        30509: item['stopTime']
-                    })
-                if '注' in item['orderText'] or '针' in item['orderText']:
-                    zhenji.append({
-                        30601: item['exeTime'],
-                        30602: item['orderName'],
-                        30603: item['specification'],
-                        30604: item['onceDosage'],
-                        30605: item['frequencyName'],
-                        30606: item['usageName'],
-                        30607: item['totalNumUnit'],
-                        30608: 3,
-                        30609: item['stopTime']
-                    })
+            if nurse_content and '口服' in nurse_content:
+                koufu.append({
+                    30501: item['exeTime'],
+                    30502: item['orderName'],
+                    30503: item['specification'],
+                    30504: item['onceDosage'],
+                    30505: item['frequencyName'],
+                    30506: item['usageName'],
+                    30507: item['totalNumUnit'],
+                    30508: 3,
+                    30509: item['stopTime']
+                })
+            if '注' in item['orderText'] or '针' in item['orderText']:
+                zhenji.append({
+                    30601: item['exeTime'],
+                    30602: item['orderName'],
+                    30603: item['specification'],
+                    30604: item['onceDosage'],
+                    30605: item['frequencyName'],
+                    30606: item['usageName'],
+                    30607: item['totalNumUnit'],
+                    30608: 3,
+                    30609: item['stopTime']
+                })
         return yizhu, koufu, zhenji
 
     def get_blbg(self, doc):
         url = self.host + '/app-sys-manage/personality/table/getStyle/8947/1581667331'
         response = requests.post(url, headers=self.authorize)
         if response.json()['body']:
-            logger.info(doc[''])
-            assert None
+            logger.info(response.json()['body'])
+            # assert None
 
     def get_xueyansuo(self, blh):
         from zhuyuan import xueyansuo
@@ -302,15 +300,13 @@ class NewHis(object):
 
         result = {
             'binganshouye': binganshouye,
-            'gerenbingshi': '',  # hebingdao gerenbingshi
+            # 'gerenbingshi': '',  # hebingdao gerenbingshi
             'changqiyizhu': yizhu_s,
-            # 'shenzangbinglibaogao': sz_blbg,
-            'binglibaogao': '',
             'xysszbbg': xueyansuo,
             'cqkfyy': koufu_s,
             'cqzjyy': zhenji_s,
         }
-        print(result)
+        return result
 
 
 if __name__ == '__main__':

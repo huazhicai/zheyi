@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
 
-from config.utils import capital_to_lower, filter_data
+from utils.util import capital_to_lower, filter_data
 
 BASE_SQL = '''select blh, patientid as jzkh, PATIENTNAME as xm, birthday as csrq, 
                     CHECKTIME as jianyanshijian, EXAMINAIM as jianyanmudi, SAMPLENO as yangbenhao 

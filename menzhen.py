@@ -1,5 +1,5 @@
 from config.base_config import outpatient_system_code
-from config.utils import capital_to_lower, quchong, filter_data
+from utils.util import capital_to_lower, quchong, filter_data
 
 ZD_SQL = '''select ZJ_BL_ZD.ZDMC as zhenduanmingcheng, JZRQ as zhenduanriqi
                     from zj_bl_brbl left join zj_bl_zd on zj_bl_brbl.jzxh=zj_bl_zd.jzxh

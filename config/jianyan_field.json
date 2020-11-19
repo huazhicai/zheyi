@@ -5,8 +5,7 @@
     "parent_id": "zhyl1510100",
     "date_key": "zhyl1510101",
     "source": [
-      "\u767d\u7ec6\u80de\u8ba1\u6570",
-      "\u767d\u7ec6\u80de"
+      "\u767d\u7ec6\u80de\u8ba1\u6570"
     ],
     "unit": "10E9/L"
   },
@@ -40,26 +39,13 @@
     ],
     "unit": "10E9/L"
   },
-  "zhyl1510106": {
-    "id": "zhyl1510106",
-    "label": "\u4e2d\u6027\u7c92\u7ec6\u80de",
-    "parent_id": "zhyl1510100",
-    "date_key": "zhyl1510101",
-    "source": [
-      "\u4e2d\u6027\u7c92\u7ec6\u80de(%)",
-      "\u4e2d\u6027\u7c92\u7ec6\u80de(\u624b\u5de5)"
-    ],
-    "unit": "%"
-  },
   "zhyl1510107": {
     "id": "zhyl1510107",
     "label": "\u6dcb\u5df4\u7ec6\u80de",
     "parent_id": "zhyl1510100",
     "date_key": "zhyl1510101",
     "source": [
-      "\u6dcb\u5df4\u7ec6\u80de",
-      "\u603b\u6dcb\u5df4\u7ec6\u80de",
-      "\u6dcb\u5df4\u7ec6\u80de(%)"
+      "\u6dcb\u5df4\u7ec6\u80de"
     ],
     "unit": "%"
   },
@@ -70,9 +56,7 @@
     "date_key": "zhyl1510101",
     "source": [
       "\u5355\u6838\u7ec6\u80de",
-      "\u603b\u5355\u6838\u7ec6\u80de",
-      "\u5355\u6838\u7ec6\u80de.",
-      "\u5355\u6838\u7ec6\u80de(%)"
+      "\u5355\u6838\u7ec6\u80de."
     ],
     "unit": "%"
   },
@@ -83,9 +67,7 @@
     "date_key": "zhyl1510101",
     "source": [
       "\u55dc\u9178\u6027\u7c92\u7ec6\u80de",
-      "\u55dc\u9178\u6027\u7ec6\u80de",
-      "\u55dc\u9178\u6027\u7c92\u7ec6\u80de(%)",
-      "\u55dc\u9178\u6027\u7c92\u7ec6\u80de(\u624b\u5de5)"
+      "\u55dc\u9178\u6027\u7ec6\u80de"
     ],
     "unit": "%"
   },
@@ -96,9 +78,7 @@
     "date_key": "zhyl1510101",
     "source": [
       "\u55dc\u78b1\u6027\u7c92\u7ec6\u80de",
-      "\u55dc\u78b1\u6027\u7ec6\u80de",
-      "\u55dc\u78b1\u6027\u7c92\u7ec6\u80de(%)",
-      "\u55dc\u78b1\u6027\u7c92\u7ec6\u80de(\u624b\u5de5)"
+      "\u55dc\u78b1\u6027\u7ec6\u80de"
     ],
     "unit": "%"
   },
@@ -115,7 +95,7 @@
   },
   "zhyl1510112": {
     "id": "zhyl1510112",
-    "label": "\u6dcb\u5df4   \u7ec6\u80de",
+    "label": "\u6dcb\u5df4\u7ec6\u80de",
     "parent_id": "zhyl1510100",
     "date_key": "zhyl1510101",
     "source": [
@@ -173,8 +153,7 @@
     "parent_id": "zhyl1510100",
     "date_key": "zhyl1510101",
     "source": [
-      "\u7ea2\u7ec6\u80de\u8ba1\u6570",
-      "\u7ea2\u7ec6\u80de"
+      "\u7ea2\u7ec6\u80de\u8ba1\u6570"
     ],
     "unit": "10E12/L"
   },
@@ -235,9 +214,7 @@
     "date_key": "zhyl1510201",
     "source": [
       "\u603b\u86cb\u767d",
-      "\u603b\u86cb\u767d.",
-      "\u86cb\u767d",
-      "\u8840\u6e05\u603b\u86cb\u767d"
+      "\u603b\u86cb\u767d."
     ],
     "unit": "g/L"
   },
@@ -260,6 +237,16 @@
       "\u7403\u86cb\u767d"
     ],
     "unit": "g/L"
+  },
+  "zhyl1510206": {
+    "id": "zhyl1510206",
+    "label": "\u767d\u7403\u86cb\u767d\u6bd4\u4f8b",
+    "parent_id": "zhyl1510200",
+    "date_key": "zhyl1510201",
+    "source": [
+      "\u767d\u7403\u86cb\u767d\u6bd4\u4f8b"
+    ],
+    "unit": null
   },
   "zhyl1510207": {
     "id": "zhyl1510207",
@@ -317,8 +304,7 @@
     "parent_id": "zhyl1510200",
     "date_key": "zhyl1510201",
     "source": [
-      "\u603b\u80c6\u7ea2\u7d20",
-      "\u80c6\u7ea2\u7d20"
+      "\u603b\u80c6\u7ea2\u7d20"
     ],
     "unit": "\u03bcmol/L"
   },
@@ -344,7 +330,7 @@
   },
   "zhyl1510215": {
     "id": "zhyl1510215",
-    "label": "\u8c37\u6c28\u9170\u8f6c\u915e\u9176",
+    "label": "\u8c37\u6c28\u9170\u8f6c\u80bd\u9176",
     "parent_id": "zhyl1510200",
     "date_key": "zhyl1510201",
     "source": [
@@ -358,7 +344,9 @@
     "parent_id": "zhyl1510200",
     "date_key": "zhyl1510201",
     "source": [
-      "\u817a\u82f7\u9178\u8131\u6c28\u9176"
+      "\u817a\u82f7\u9178\u8131\u6c28\u9176",
+      "\u80f8\u6c34\u817a\u82f7\u9178\u8131\u6c28\u9176",
+      "\u8179\u6c34\u817a\u82f7\u9178\u8131\u6c28\u9176"
     ],
     "unit": "U/L"
   },
@@ -384,7 +372,7 @@
   },
   "zhyl1510305": {
     "id": "zhyl1510305",
-    "label": "\u9ad8\u5bc6\u5ea6\u7247\u91cf\u767d-C",
+    "label": "\u9ad8\u5bc6\u5ea6\u8102\u86cb\u767d-C",
     "parent_id": "zhyl1510300",
     "date_key": "zhyl1510301",
     "source": [
@@ -422,6 +410,76 @@
     ],
     "unit": "mmol/L"
   },
+  "zhyl1510503": {
+    "id": "zhyl1510503",
+    "label": "\u808c\u9150",
+    "parent_id": "zhyl1510500",
+    "date_key": "zhyl1510501",
+    "source": [
+      "\u808c\u9150"
+    ],
+    "unit": "\u03bcmol/L"
+  },
+  "zhyl1510603": {
+    "id": "zhyl1510603",
+    "label": "\u5c3f\u7d20",
+    "parent_id": "zhyl1510600",
+    "date_key": "zhyl1510601",
+    "source": [
+      "\u5c3f\u7d20"
+    ],
+    "unit": "mmol/L"
+  },
+  "zhyl1510803": {
+    "id": "zhyl1510803",
+    "label": "\u94be",
+    "parent_id": "zhyl1510800",
+    "date_key": "zhyl1510801",
+    "source": [
+      "\u94be"
+    ],
+    "unit": "mmol/L"
+  },
+  "zhyl1510805": {
+    "id": "zhyl1510805",
+    "label": "\u6c2f",
+    "parent_id": "zhyl1510800",
+    "date_key": "zhyl1510801",
+    "source": [
+      "\u6c2f"
+    ],
+    "unit": "mmol/L"
+  },
+  "zhyl1510807": {
+    "id": "zhyl1510807",
+    "label": "\u94a0",
+    "parent_id": "zhyl1510800",
+    "date_key": "zhyl1510801",
+    "source": [
+      "\u94a0"
+    ],
+    "unit": "mmol/L"
+  },
+  "zhyl1510811": {
+    "id": "zhyl1510811",
+    "label": "\u9499",
+    "parent_id": "zhyl1510800",
+    "date_key": "zhyl1510801",
+    "source": [
+      "\u9499"
+    ],
+    "unit": "mmol/L"
+  },
+  "zhyl1510813": {
+    "id": "zhyl1510813",
+    "label": "\u9541",
+    "parent_id": "zhyl1510800",
+    "date_key": "zhyl1510801",
+    "source": [
+      "\u9541"
+    ],
+    "unit": "mmol/L"
+  },
   "zhyl1510903": {
     "id": "zhyl1510903",
     "label": "\u8840\u6e05\u94c1",
@@ -434,7 +492,7 @@
   },
   "zhyl1510905": {
     "id": "zhyl1510905",
-    "label": "\u8840\u6e05\u603b\u94c1\u7ed3\u5408\u529b",
+    "label": "\u603b\u94c1\u7ed3\u5408\u529b",
     "parent_id": "zhyl1510900",
     "date_key": "zhyl1510901",
     "source": [
@@ -452,19 +510,19 @@
     ],
     "unit": "mg/dL"
   },
-  "zhyl1511005": {
-    "id": "zhyl1511005",
-    "label": "\u4e8c\u6c27\u5316\u78b3\u5206\u538b pCO2(\u900f\u524d)",
+  "zhyl1511003": {
+    "id": "zhyl1511003",
+    "label": "\u8840\u6db2\u9178\u78b1\u5ea6 pH",
     "parent_id": "zhyl1511000",
     "date_key": "zhyl1511001",
     "source": [
-      "\u4e8c\u6c27\u5316\u78b3\u5206\u538bpCO2"
+      "\u8840\u6db2\u9178\u78b1\u5ea6pH"
     ],
-    "unit": "mmHg"
+    "unit": null
   },
-  "zhyl1511006": {
-    "id": "zhyl1511006",
-    "label": "\u4e8c\u6c27\u5316\u78b3\u5206\u538b pCO2(\u900f\u540e)",
+  "zhyl1511005": {
+    "id": "zhyl1511005",
+    "label": "\u4e8c\u6c27\u5316\u78b3\u5206\u538b pCO2",
     "parent_id": "zhyl1511000",
     "date_key": "zhyl1511001",
     "source": [
@@ -474,17 +532,7 @@
   },
   "zhyl1511007": {
     "id": "zhyl1511007",
-    "label": "\u6c27\u5206\u538bpO2(\u900f\u524d)",
-    "parent_id": "zhyl1511000",
-    "date_key": "zhyl1511001",
-    "source": [
-      "\u6c27\u5206\u538bpO2"
-    ],
-    "unit": "mmHg"
-  },
-  "zhyl1511008": {
-    "id": "zhyl1511008",
-    "label": "\u6c27\u5206\u538bpO2(\u900f\u540e)",
+    "label": "\u6c27\u5206\u538b pO2",
     "parent_id": "zhyl1511000",
     "date_key": "zhyl1511001",
     "source": [
@@ -494,17 +542,7 @@
   },
   "zhyl1511009": {
     "id": "zhyl1511009",
-    "label": "\u78b3\u9178\u6c22\u6839\u6d53\u5ea6(\u900f\u524d)",
-    "parent_id": "zhyl1511000",
-    "date_key": "zhyl1511001",
-    "source": [
-      "\u78b3\u9178\u6c22\u6839\u6d53\u5ea6"
-    ],
-    "unit": "mmol/L"
-  },
-  "zhyl1511010": {
-    "id": "zhyl1511010",
-    "label": "\u78b3\u9178\u6c22\u6839\u6d53\u5ea6(\u900f\u540e)",
+    "label": "\u78b3\u9178\u6c22\u6839\u6d53\u5ea6",
     "parent_id": "zhyl1511000",
     "date_key": "zhyl1511001",
     "source": [
@@ -514,7 +552,7 @@
   },
   "zhyl1511011": {
     "id": "zhyl1511011",
-    "label": "\u6807\u51c6\u78b1\u5269\u4f59 SBE(\u900f\u524d)",
+    "label": "\u6807\u51c6\u78b1\u5269\u4f59 SBE",
     "parent_id": "zhyl1511000",
     "date_key": "zhyl1511001",
     "source": [
@@ -522,19 +560,19 @@
     ],
     "unit": "mmol/L"
   },
-  "zhyl1511012": {
-    "id": "zhyl1511012",
-    "label": "\u6807\u51c6\u78b1\u5269\u4f59 SBE(\u900f\u540e)",
+  "zhyl1511013": {
+    "id": "zhyl1511013",
+    "label": "\u6807\u51c6\u78b1\u9178\u6c22\u76d0 SB",
     "parent_id": "zhyl1511000",
     "date_key": "zhyl1511001",
     "source": [
-      "\u6807\u51c6\u78b1\u5269\u4f59SBE"
+      "\u6807\u51c6\u78b3\u9178\u6c22\u76d0SB"
     ],
     "unit": "mmol/L"
   },
   "zhyl1511015": {
     "id": "zhyl1511015",
-    "label": "\u5b9e\u9645\u78b1\u5269\u4f59(\u900f\u524d)",
+    "label": "\u5b9e\u9645\u78b1\u5269\u4f59",
     "parent_id": "zhyl1511000",
     "date_key": "zhyl1511001",
     "source": [
@@ -542,19 +580,39 @@
     ],
     "unit": "mmol/L"
   },
-  "zhyl1511016": {
-    "id": "zhyl1511016",
-    "label": "\u5b9e\u9645\u78b1\u5269\u4f59(\u900f\u540e)",
+  "zhyl1511023": {
+    "id": "zhyl1511023",
+    "label": "\u75c5\u4eba\u4f53\u6e29",
     "parent_id": "zhyl1511000",
     "date_key": "zhyl1511001",
     "source": [
-      "\u5b9e\u9645\u78b1\u5269\u4f59"
+      "\u75c5\u4eba\u4f53\u6e29"
     ],
-    "unit": "mmol/L"
+    "unit": "\u2103"
+  },
+  "zhyl1511025": {
+    "id": "zhyl1511025",
+    "label": "\u5438\u5165\u6c27\u6d41\u91cf",
+    "parent_id": "zhyl1511000",
+    "date_key": "zhyl1511001",
+    "source": [
+      "\u5438\u5165\u6c27\u6d41\u91cf\u5206\u6570"
+    ],
+    "unit": "%"
+  },
+  "zhyl1511027": {
+    "id": "zhyl1511027",
+    "label": "\u6c27\u9971\u548c\u5ea6",
+    "parent_id": "zhyl1511000",
+    "date_key": "zhyl1511001",
+    "source": [
+      "\u6c27\u9971\u548c\u5ea6"
+    ],
+    "unit": "%"
   },
   "zhyl1511029": {
     "id": "zhyl1511029",
-    "label": "\u8840\u7ec6\u80de\u538b\u79ef(\u900f\u524d)",
+    "label": "\u8840\u7ec6\u80de\u538b\u79ef",
     "parent_id": "zhyl1511000",
     "date_key": "zhyl1511001",
     "source": [
@@ -562,19 +620,19 @@
     ],
     "unit": "%"
   },
-  "zhyl1511030": {
-    "id": "zhyl1511030",
-    "label": "\u8840\u7ec6\u80de\u538b\u79ef(\u900f\u540e)",
-    "parent_id": "zhyl1511000",
-    "date_key": "zhyl1511001",
+  "zhyl1511103": {
+    "id": "zhyl1511103",
+    "label": "\u8840\u6db2\u9178\u78b1\u5ea6 pH",
+    "parent_id": "zhyl1511100",
+    "date_key": "zhyl1511101",
     "source": [
-      "\u8840\u7ec6\u80de\u538b\u79ef"
+      "\u8840\u6db2\u9178\u78b1\u5ea6pH"
     ],
-    "unit": "%"
+    "unit": null
   },
   "zhyl1511104": {
     "id": "zhyl1511104",
-    "label": "\u4e8c\u6c27\u5316\u78b3\u5206\u538bpCO2",
+    "label": "\u4e8c\u6c27\u5316\u78b3\u5206\u538b pCO2",
     "parent_id": "zhyl1511100",
     "date_key": "zhyl1511101",
     "source": [
@@ -604,7 +662,7 @@
   },
   "zhyl1511107": {
     "id": "zhyl1511107",
-    "label": "\u6807\u51c6\u78b1\u5269\u4f59SBE",
+    "label": "\u6807\u51c6\u78b1\u5269\u4f59 SBE",
     "parent_id": "zhyl1511100",
     "date_key": "zhyl1511101",
     "source": [
@@ -672,36 +730,15 @@
     ],
     "unit": "%"
   },
-  "zhyl1511203": {
-    "id": "zhyl1511203",
-    "label": "\u524d\u767d\u86cb\u767d",
-    "parent_id": "zhyl1511200",
-    "date_key": "zhyl1511201",
-    "source": [
-      "\u5c3f\u767d\u86cb\u767d"
-    ],
-    "unit": "mg/L"
-  },
   "zhyl1511303": {
     "id": "zhyl1511303",
     "label": "C-\u53cd\u5e94\u86cb\u767d",
     "parent_id": "zhyl1511300",
     "date_key": "zhyl1511301",
     "source": [
-      "C\u53cd\u5e94\u86cb\u767d",
-      "\u8d85\u654fC\u53cd\u5e94\u86cb\u767d"
+      "C\u53cd\u5e94\u86cb\u767d"
     ],
     "unit": "mg/L"
-  },
-  "zhyl1511304": {
-    "id": "zhyl1511304",
-    "label": "\u524d\u964d\u9499\u7d20",
-    "parent_id": "zhyl1511300",
-    "date_key": "zhyl1511301",
-    "source": [
-      "\u964d\u9499\u7d20\u539f"
-    ],
-    "unit": "ng/mL"
   },
   "zhyl1511403": {
     "id": "zhyl1511403",
@@ -724,6 +761,16 @@
     ],
     "unit": "IU/mL"
   },
+  "zhyl1511603": {
+    "id": "zhyl1511603",
+    "label": "\u56fd\u9645\u6807\u51c6\u5316\u6bd4\u503c",
+    "parent_id": "zhyl1511600",
+    "date_key": "zhyl1511601",
+    "source": [
+      "\u56fd\u9645\u6807\u51c6\u5316\u6bd4\u503c"
+    ],
+    "unit": null
+  },
   "zhyl1511604": {
     "id": "zhyl1511604",
     "label": "\u7ea4\u7ef4\u86cb\u767d\u539f",
@@ -744,38 +791,25 @@
     ],
     "unit": "\u03bcg/L"
   },
-  "zhyl1511704": {
-    "id": "zhyl1511704",
-    "label": "\u6297-HCV",
-    "parent_id": "zhyl1511700",
-    "date_key": "zhyl1511701",
-    "source": [
-      "\u6297-HIV",
-      "\u6297-HIV"
-    ],
-    "unit": "S/CO"
-  },
   "zhyl1511705": {
     "id": "zhyl1511705",
     "label": "\u6297-HIV",
     "parent_id": "zhyl1511700",
     "date_key": "zhyl1511701",
     "source": [
-      "\u6297-HIV",
       "\u6297-HIV"
     ],
     "unit": "S/CO"
   },
-  "zhyl1511706": {
-    "id": "zhyl1511706",
-    "label": "\u6885\u6bd2 TP",
+  "zhyl1511707": {
+    "id": "zhyl1511707",
+    "label": "\u6885\u6bd2 RPR",
     "parent_id": "zhyl1511700",
     "date_key": "zhyl1511701",
     "source": [
-      "\u6885\u6bd2TPPA",
-      "\u6885\u6bd2TPPA"
+      "\u6885\u6bd2\u8840\u6e05RPR"
     ],
-    "unit": "mg/L"
+    "unit": null
   },
   "zhyl1511803": {
     "id": "zhyl1511803",
@@ -784,36 +818,9 @@
     "date_key": "zhyl1511801",
     "source": [
       "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u5b9a\u91cf",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u5b9a\u91cf",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u5b9a\u91cf",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u5b9a\u91cf",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u5b9a\u91cf",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u53d1\u5149\u6cd5",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u9176\u6807\u6cd5",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u53d1\u5149\u6cd5",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u5feb\u901f\u6cd5",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u53d1\u5149\u6cd5",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u53d1\u5149\u6cd5",
-      "\u4e59\u578b\u809d\u708e\u8868\u9762\u6297\u539f\u5b9a\u6027",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f(\u7a00\u91ca)",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f(\u7a00\u91ca)",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f(\u7a00\u91ca)",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f(\u7a00\u91ca)",
-      "\u4e59\u809de\u6297\u539f",
-      "\u4e59\u809de\u6297\u539f"
+      "\u4e59\u809d\u8868\u9762\u6297\u539f\u5b9a\u91cf"
     ],
-    "unit": null
+    "unit": "IU/ml"
   },
   "zhyl1511804": {
     "id": "zhyl1511804",
@@ -821,27 +828,9 @@
     "parent_id": "zhyl1511800",
     "date_key": "zhyl1511801",
     "source": [
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53IGM",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53IgM",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53IGM",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53IGM",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53\u53d1\u5149\u6cd5",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53IgM",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53\u53d1\u5149\u6cd5",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53\u53d1\u5149\u6cd5",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53\u9176\u6807\u6cd5",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53(1:1)",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53(IgM)"
+      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53"
     ],
-    "unit": null
+    "unit": "S/CO"
   },
   "zhyl1511805": {
     "id": "zhyl1511805",
@@ -849,106 +838,59 @@
     "parent_id": "zhyl1511800",
     "date_key": "zhyl1511801",
     "source": [
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53\u53d1\u5149\u6cd5",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53\u53d1\u5149\u6cd5",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53\u53d1\u5149\u6cd5",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53\u9176\u6807\u6cd5",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53\u9176\u6807\u6cd5",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53\u53d1\u5149\u6cd5",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53\u53d1\u5149\u6cd5",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u5b9a\u91cf",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u5b9a\u91cf",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u5b9a\u91cf",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u5b9a\u91cf",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f\u5b9a\u91cf"
+      "\u4e59\u809d\u8868\u9762\u6297\u4f53"
     ],
-    "unit": null
+    "unit": "mIU/ml"
   },
   "zhyl1511806": {
     "id": "zhyl1511806",
-    "label": "\u4e59\u809de\u6297\u539f",
+    "label": "\u4e59\u809d e \u6297\u539f",
     "parent_id": "zhyl1511800",
     "date_key": "zhyl1511801",
     "source": [
-      "\u4e59\u809de\u6297\u539f",
-      "\u4e59\u809de\u6297\u539f",
-      "\u4e59\u809de\u6297\u539f",
-      "\u4e59\u809de\u6297\u539f",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u539f\u53d1\u5149\u6cd5",
-      "\u4e59\u809de\u6297\u539f\u9176\u6807\u6cd5",
-      "\u4e59\u809de\u6297\u539f\u53d1\u5149\u6cd5",
-      "\u4e59\u809de\u6297\u539f\u53d1\u5149\u6cd5",
-      "\u4e59\u809de\u6297\u539f\u53d1\u5149\u6cd5",
-      "\u4e59\u809de\u6297\u539f\u53d1\u5149\u6cd5",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809d\u8868\u9762\u6297\u539f",
-      "\u4e59\u809de\u6297\u539f(\u7a00\u91ca)"
+      "\u4e59\u809de\u6297\u539f"
     ],
-    "unit": null
+    "unit": "PEIU/ml"
   },
   "zhyl1511807": {
     "id": "zhyl1511807",
-    "label": "\u4e59\u809de\u6297\u4f53",
+    "label": "\u4e59\u809d e \u6297\u4f53",
     "parent_id": "zhyl1511800",
     "date_key": "zhyl1511801",
     "source": [
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u4f53",
-      "\u4e59\u809de\u6297\u539f",
-      "\u4e59\u809de\u6297\u539f",
-      "\u4e59\u809de\u6297\u539f",
-      "\u4e59\u809de\u6297\u539f",
-      "\u4e59\u809de\u6297\u4f53\u53d1\u5149\u6cd5",
-      "\u4e59\u809de\u6297\u4f53\u53d1\u5149\u6cd5",
-      "\u4e59\u809de\u6297\u4f53\u53d1\u5149\u6cd5",
-      "\u4e59\u809de\u6297\u4f53\u9176\u6807\u6cd5",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53",
-      "\u4e59\u809d\u6838\u5fc3\u6297\u4f53",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53",
-      "\u4e59\u809d\u8868\u9762\u6297\u4f53"
+      "\u4e59\u809de\u6297\u4f53"
+    ],
+    "unit": "S/CO"
+  },
+  "zhyl1511808": {
+    "id": "zhyl1511808",
+    "label": "\u4e59\u809d\u75c5\u6bd2\u524dSI\u6297\u539f",
+    "parent_id": "zhyl1511800",
+    "date_key": "zhyl1511801",
+    "source": [
+      "\u4e59\u809d\u75c5\u6bd2\u524dS1\u6297\u539f"
     ],
     "unit": null
   },
   "zhyl1511809": {
     "id": "zhyl1511809",
-    "label": "HBV-DNA",
+    "label": "\u4e59\u809d HBV-DNA",
     "parent_id": "zhyl1511800",
     "date_key": "zhyl1511801",
     "source": [
-      "HBV-DNA",
-      "EBV-DNA"
+      "HBV-DNA"
     ],
     "unit": "IU/ml"
+  },
+  "zhyl1511810": {
+    "id": "zhyl1511810",
+    "label": "\u7532\u809d IgM",
+    "parent_id": "zhyl1511800",
+    "date_key": "zhyl1511801",
+    "source": [
+      "\u7532\u809dIgM"
+    ],
+    "unit": null
   },
   "zhyl1511811": {
     "id": "zhyl1511811",
@@ -957,14 +899,7 @@
     "date_key": "zhyl1511801",
     "source": [
       "\u4e19\u809d\u6297\u4f53IgG",
-      "\u4e19\u809d\u6297\u4f53IgG",
-      "\u4e19\u578b\u809d\u708e\u6297\u4f53IgG",
-      "\u4e19\u578b\u809d\u708e\u6297\u4f53IgG",
-      "\u4e01\u809d\u75c5\u6bd2\u6297\u4f53IgG",
-      "\u620a\u809d\u75c5\u6bd2\u6297\u4f53IgG",
-      "\u9ebb\u75b9\u6297\u4f53IgG",
-      "\u620a\u809d\u6297\u4f53IGG",
-      "\u4e19\u809d\u6297\u4f53"
+      "\u4e19\u809d\u6297\u4f53IgG"
     ],
     "unit": null
   },
@@ -975,42 +910,59 @@
     "date_key": "zhyl1511801",
     "source": [
       "HCV-RNA",
-      "HCV-RNA",
-      "HCV-RNA",
-      "HCMV-DNA",
-      "HCMV-DNA"
+      "HCV-RNA"
     ],
     "unit": null
   },
-  "zhyl1511904": {
-    "id": "zhyl1511904",
-    "label": "\u764c\u80da\u6297\u539f\u81ea\u52a8\u6cd5",
-    "parent_id": "zhyl1511900",
-    "date_key": "zhyl1511901",
+  "zhyl1511813": {
+    "id": "zhyl1511813",
+    "label": "\u4e01\u809d(Ag)",
+    "parent_id": "zhyl1511800",
+    "date_key": "zhyl1511801",
     "source": [
-      "\u764c\u80da\u6297\u539f"
+      "\u4e01\u809d(Ag)"
     ],
-    "unit": "ng/mL"
+    "unit": null
   },
-  "zhyl1511905": {
-    "id": "zhyl1511905",
-    "label": "\u7cd6\u6297\u539f199\u81ea\u52a8\u6cd5",
-    "parent_id": "zhyl1511900",
-    "date_key": "zhyl1511901",
+  "zhyl1511814": {
+    "id": "zhyl1511814",
+    "label": "\u4e01\u809d(IgG)",
+    "parent_id": "zhyl1511800",
+    "date_key": "zhyl1511801",
     "source": [
-      "\u7cd6\u6297\u539f199"
+      "\u4e01\u809d(IgG)"
     ],
-    "unit": "U/mL"
+    "unit": null
   },
-  "zhyl1511906": {
-    "id": "zhyl1511906",
-    "label": "\u7cd6\u6297\u539f125\u53d1\u5149\u6cd5",
-    "parent_id": "zhyl1511900",
-    "date_key": "zhyl1511901",
+  "zhyl1511815": {
+    "id": "zhyl1511815",
+    "label": "\u4e01\u809d(IgM)",
+    "parent_id": "zhyl1511800",
+    "date_key": "zhyl1511801",
     "source": [
-      "\u7cd6\u6297\u539f125"
+      "\u4e01\u809d(IgM)"
     ],
-    "unit": "U/mL"
+    "unit": null
+  },
+  "zhyl1511816": {
+    "id": "zhyl1511816",
+    "label": "\u620a\u809d(lgM)",
+    "parent_id": "zhyl1511800",
+    "date_key": "zhyl1511801",
+    "source": [
+      "\u620a\u809d(IgM)"
+    ],
+    "unit": null
+  },
+  "zhyl1511817": {
+    "id": "zhyl1511817",
+    "label": "\u620a\u809d(IgG)",
+    "parent_id": "zhyl1511800",
+    "date_key": "zhyl1511801",
+    "source": [
+      "\u620a\u809d(IgG)"
+    ],
+    "unit": null
   },
   "zhyl1511908": {
     "id": "zhyl1511908",
@@ -1018,32 +970,29 @@
     "parent_id": "zhyl1511900",
     "date_key": "zhyl1511901",
     "source": [
-      "\u603b\u524d\u5217\u817a\u7279\u5f02\u6297\u539f",
-      "\u603b\u524d\u5217\u817a\u7279\u5f02\u6297\u539f\u624b\u5de5"
+      "\u603b\u524d\u5217\u817a\u7279\u5f02\u6297\u539f"
     ],
     "unit": "ng/mL"
   },
-  "zhyl1513105": {
-    "id": "zhyl1513105",
-    "label": "\u7ed3\u679c",
-    "parent_id": "zhyl1513100",
-    "date_key": "zhyl1513101",
+  "zhyl1513303": {
+    "id": "zhyl1513303",
+    "label": "\u5fc3\u7535\u56fe",
+    "parent_id": "zhyl1513300",
+    "date_key": "zhyl1513301",
     "source": [
-      "\u7ed3\u679c",
-      "\u7ed3\u679c"
+      "\u5fc3\u7535\u56fe"
     ],
     "unit": null
   },
-  "zhyl1513403": {
-    "id": "zhyl1513403",
-    "label": "\u7ed3\u679c",
-    "parent_id": "zhyl1513400",
-    "date_key": "zhyl1513401",
+  "zhyl1513505": {
+    "id": "zhyl1513505",
+    "label": "\u7cd6\u5316\u8840\u7ea2\u86cb\u767dA1c",
+    "parent_id": "zhyl1513500",
+    "date_key": "zhyl1513501",
     "source": [
-      "\u7ed3\u679c",
-      "\u7ed3\u679c"
+      "\u7cd6\u5316\u8840\u7ea2\u86cb\u767dA1c"
     ],
-    "unit": null
+    "unit": "%"
   },
   "zhyl1513803": {
     "id": "zhyl1513803",
@@ -1057,7 +1006,7 @@
   },
   "zhyl1514103": {
     "id": "zhyl1514103",
-    "label": "25 \u7f9f\u7ef4\u751f\u7d20D",
+    "label": "25 \u7f9f\u7ef4\u751f\u7d20 D",
     "parent_id": "zhyl1514100",
     "date_key": "zhyl1514101",
     "source": [
