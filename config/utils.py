@@ -25,8 +25,8 @@ def capital_to_lower(doc):
     return new
 
 
-def filter_data(ybzl, source_data):
-    # assert len(source_data) == 5
+def filter_data(ybzl, obj_data):
+    # assert len(obj_data) == 5
 
     if isinstance(ybzl, dict) and ybzl.get(20104):
         xm = ybzl.get(20104)
@@ -43,14 +43,14 @@ def filter_data(ybzl, source_data):
     else:
         sfzh, blh, jzkh, xm, csrq = ybzl
 
-    if isinstance(source_data, dict):
-        obj_sfzh = source_data.get('sfzh')
-        obj_blh = source_data.get('blh')
-        obj_jzkh = source_data.get('jzkh')
-        obj_xm = source_data.get('xm')
-        obj_csrq = source_data.get('csrq')
+    if isinstance(obj_data, dict):
+        obj_sfzh = obj_data.get('sfzh')
+        obj_blh = obj_data.get('blh')
+        obj_jzkh = obj_data.get('jzkh')
+        obj_xm = obj_data.get('xm')
+        obj_csrq = obj_data.get('csrq')
     else:
-        obj_sfzh, obj_blh, obj_jzkh, obj_xm, obj_csrq = source_data
+        obj_sfzh, obj_blh, obj_jzkh, obj_xm, obj_csrq = obj_data
 
     if sfzh and obj_sfzh:
         if sfzh == obj_sfzh:

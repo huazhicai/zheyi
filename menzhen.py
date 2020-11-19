@@ -1,7 +1,6 @@
 from config.base_config import outpatient_system_code
 from config.utils import capital_to_lower, quchong, filter_data
 
-
 ZD_SQL = '''select ZJ_BL_ZD.ZDMC as zhenduanmingcheng, JZRQ as zhenduanriqi
                     from zj_bl_brbl left join zj_bl_zd on zj_bl_brbl.jzxh=zj_bl_zd.jzxh
                     where JZKH in {}'''
@@ -77,7 +76,7 @@ class MenZhenData(object):
         date = '1900'
         for item in array:
             if item['ldrq'] and item['ldrq'] > date:
-                date = item['ldrq']   # 最新日期的基本信息
+                date = item['ldrq']  # 最新日期的基本信息
                 new_data.update({
                     60104: item['xm'],
                     60105: item['sfzh'],

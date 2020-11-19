@@ -222,3 +222,4 @@
 [2020-11-05 21:38:14] INFO [xuetou:157] 25078 Save to mongo successfully!
 [2020-11-05 21:38:32] INFO [xuetou:157] 25461 Save to mongo successfully!
 [2020-11-05 21:38:37] INFO [xuetou:157] 17519 Save to mongo successfully!
+[2020-11-18 11:00:20] INFO [new_his:40] 登录失败 {'code': 4002, 'message': 'not login', 'body': {'login_mark': '用户名或密码错误'}}

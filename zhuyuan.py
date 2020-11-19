@@ -16,6 +16,38 @@ logger = getLogger('zhuyuan')
 headers = {'User-Agent': random.choice(user_agent)}
 
 
+def xueyansuo(blh):
+    url = 'http://192.168.2.8:8055/Report/SearchReport'
+    json_data = {
+        "bah": blh,
+        "startTime": "2007-01-01",
+        "endTime": datetime.now().strftime('%Y-%m-%d'),
+        "Types": ["XYS", "PS", "SZB", "LIS-RST"],
+    }
+    resp = requests.post(url, json=json_data)
+    if len(resp.text) > 10:
+        doc = etree.HTML(resp.text)
+        result = doc.xpath('//tr')
+        xys = []
+        m = lambda x, y: ''.join(x.xpath(y)).strip()
+        for i in result:
+            tupian_url = 'http://192.168.2.8:8055' + m(i, './td[7]/a/@href')
+            xys.append({
+                50501: m(i, './td[6]//text()'),
+                50502: m(i, './td[5]//text()'),
+                50503: xueyansuo_tupian(tupian_url),
+            })
+        return xys
+    else:
+        return []
+
+
+def xueyansuo_tupian(url):
+    from bson import binary
+    data = requests.get(url, timeout=15).content
+    return binary.Binary(data)
+
+
 class HisSystem(object):
     def __init__(self):
         self._host = 'http://192.168.17.102'
@@ -109,10 +141,6 @@ class HisSystem(object):
         return doc
 
     def binganshouye(self, doc, blh):
-        # self._session.get(self.host+'/zwemr4/LCRecord/EMRFrame.aspx?zyxh={}'.format(idx))
-        # resp = self._session.get(
-        #     self._host + '/zwemr/Doctors/BingAnShouYeView1.aspx?state=1&zyxh={}&bah={}&gh={}'.format(idx, blh,
-        #                                                                                              self._user))
         p = lambda x: ''.join(doc.xpath('//*[@id="_ctl0_C1_{}"]//text()'.format(x))).strip()
         p_1 = lambda x: ''.join(
             doc.xpath('//*[@id="_ctl0_C1_{}"]/option[@selected="selected"]/text()'.format(x))).strip()
