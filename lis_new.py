@@ -4,10 +4,10 @@ import json
 from utils.util import capital_to_lower, filter_data
 
 BASE_SQL = '''select blh, patientid as jzkh, PATIENTNAME as xm, birthday as csrq, 
-                    CHECKTIME as jianyanshijian, EXAMINAIM as jianyanmudi, SAMPLENO as yangbenhao 
+                    CHECKTIME as jianyanshijian, EXAMINAIM as jianyanmudi, SAMPLENO as sample 
                     from L_PATIENTINFO  where blh='{}' or patientid='{}' or patientname='{}' '''
 
-DETAIL_SQL = '''select sampleno as yangbenhao, B.CHINESENAME as jianyanxiangmu,B.ENGLISHAB as jianyanxiangmuen,TESTRESULT as ceshijieguo,
+DETAIL_SQL = '''select sampleno as sample, B.CHINESENAME as jianyanxiangmu,B.ENGLISHAB as jianyanxiangmuen,TESTRESULT as ceshijieguo,
         REFLO as cankaodixian,REFHI as cankaogaoxian,MEASURETIME as jianyanshijian,L_TESTRESULT.UNIT as danwei 
         from L_TESTRESULT left join L_TESTDESCRIBE B on L_TESTRESULT.TESTID=B.TESTID  where SAMPLENO in {} '''
 
@@ -18,6 +18,7 @@ class LisData(object):
 
         self.config_data = config_data
         self.out_data = {}
+        self.record_samples = []
 
     def fetch(self, sql):
         import subprocess, os
@@ -40,31 +41,37 @@ class LisData(object):
         out_data = [row_data for row_data in self.fetch(sql) if filter_data(self.base_info, row_data)]
         return out_data
 
-    def get_detail_data(self):
+    def get_test_results(self):
         input_array = self.get_base_info()
-        yangbenhao_s = [i['yangbenhao'] for i in input_array]
-        if len(yangbenhao_s) == 0:
+        samples = [i['sample'] for i in input_array if len(i['sample']) > 5]
+        if len(samples) == 0:
             return []
 
         # 当样本号超过1000时，oracle 有限制
-        yangbenhao_list = []
-        while len(yangbenhao_s) > 1000:
-            yangbenhao_list.append(yangbenhao_s[:1000])
-            yangbenhao_s = yangbenhao_s[1000:]
+        sample_assemble = []
+        while len(samples) > 1000:
+            sample_assemble.append(samples[:1000])
+            samples = samples[1000:]
 
-        if len(yangbenhao_s) == 1:
-            yangbenhao_s.append('')
-        yangbenhao_list.append(yangbenhao_s)
-        jieguo = []
-        for ybh in yangbenhao_list:
-            jieguo.extend(self.fetch(DETAIL_SQL.format(tuple(ybh))))
+        if len(samples) == 1:
+            samples.append('')
 
-        for item in input_array:
-            item['jieguo'] = [i for i in jieguo if i['yangbenhao'] == item['yangbenhao']]
+        sample_assemble.append(samples)
 
-        return input_array
+        test_results = []
+        for samps in sample_assemble:
+            test_results.extend(self.fetch(DETAIL_SQL.format(tuple(samps))))
 
-    def verify_data(self, data):
+        sample_map_results = {}
+        for result in test_results:
+            if sample_map_results.get(result['sample']):
+                sample_map_results[result['sample']].append(result)
+            else:
+                sample_map_results[result['sample']] = [result]
+
+        return sample_map_results
+
+    def extract_data_with_field(self, data):
         name = data['jianyanxiangmu']
         unit = data['danwei']
         value = data["ceshijieguo"]
@@ -78,32 +85,36 @@ class LisData(object):
                     })
                     return item
 
-    def insert_data(self, doc, index):
-        if not self.out_data.get(doc['parent_id']):
-            self.out_data[doc['parent_id']] = []
-        if len(self.out_data[doc['parent_id']]) < index + 1:
-            self.out_data[doc['parent_id']].append({
+    def insert_data(self, doc, sample):
+        if doc is None:
+            return
+        parent_id = doc.get('parent_id')
+        if not self.out_data.get(parent_id):
+            self.out_data[parent_id] = []
+
+        if sample + parent_id in self.record_samples:
+            self.out_data[parent_id][-1].update({
                 doc['id']: doc['value'],
                 doc['date_key']: doc['date']
             })
         else:
-            self.out_data[doc['parent_id']][index].update({
+            self.out_data[parent_id].append({
                 doc['id']: doc['value'],
-                doc['date_key']: doc['date']
+                doc['date_key']: doc['date'],
             })
+            self.record_samples.append(sample + parent_id)
 
     def start(self):
-        for index, item in enumerate(self.get_detail_data()):
-            for i in item['jieguo']:
-                ret_data = self.verify_data(i)
-                if ret_data:
-                    self.insert_data(ret_data, index)
+        for sample, test_items in self.get_test_results().items():
+            for item in test_items:
+                ret_data = self.extract_data_with_field(item)
+                self.insert_data(ret_data, sample)
         if self.out_data:
             return {"zhyl1500000": {"zhyl1510000": self.out_data}}
 
 
 if __name__ == '__main__':
-    args = ('330726193711052539', '02194917', None, '傅志法', '1937-11-05')
+    args = ('330622194208253417', '02614770', None, '陈寿康', '1942-08-25')
     with open('config/jianyan_field.json', 'r', encoding='utf-8') as f:
         config = json.load(f)
     lis_data = LisData(args, config)

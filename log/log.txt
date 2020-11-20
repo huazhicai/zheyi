@@ -232,3 +232,380 @@
 [2020-11-19 17:01:08] INFO [xuetou:202] Start
 [2020-11-19 17:08:55] INFO [xuetou:202] Start
 [2020-11-19 17:21:30] INFO [xuetou:202] Start
+[2020-11-19 19:35:39] INFO [main:27] Starting cycle: 1!
+[2020-11-19 19:37:47] INFO [main:27] Starting cycle: 1!
+[2020-11-19 19:38:30] INFO [main:27] Starting cycle: 1!
+[2020-11-19 19:39:54] INFO [main:27] Starting cycle: 1!
+[2020-11-19 19:40:48] INFO [main:27] Starting cycle: 1!
+[2020-11-19 19:45:33] INFO [main:28] Starting cycle: 1!
+[2020-11-19 19:46:32] INFO [main:28] Starting cycle: 1!
+[2020-11-19 19:47:45] INFO [xuetou:197] Start
+[2020-11-19 19:52:25] INFO [main:28] Starting cycle: 1!
+[2020-11-19 19:53:13] INFO [main:28] Starting cycle: 1!
+[2020-11-19 19:53:26] INFO [xuetou:166] ThreadPoolExecutor-0_0 threading patient_id 7133
+[2020-11-19 19:53:35] INFO [xuetou:166] ThreadPoolExecutor-0_1 threading patient_id 10074
+[2020-11-19 19:53:36] INFO [xuetou:166] ThreadPoolExecutor-0_2 threading patient_id 23873
+[2020-11-19 19:53:36] INFO [xuetou:166] ThreadPoolExecutor-0_3 threading patient_id 24855
+[2020-11-19 19:53:36] INFO [xuetou:166] ThreadPoolExecutor-0_4 threading patient_id 25304
+[2020-11-19 19:53:36] INFO [xuetou:166] ThreadPoolExecutor-0_5 threading patient_id 25477
+[2020-11-19 19:53:37] INFO [xuetou:166] ThreadPoolExecutor-0_6 threading patient_id 25506
+[2020-11-19 19:53:37] INFO [xuetou:166] ThreadPoolExecutor-0_7 threading patient_id 25513
+[2020-11-19 19:53:37] INFO [xuetou:166] ThreadPoolExecutor-0_8 threading patient_id 25526
+[2020-11-19 19:53:37] INFO [xuetou:166] ThreadPoolExecutor-0_9 threading patient_id 25545
+[2020-11-19 19:53:38] INFO [xuetou:166] ThreadPoolExecutor-0_10 threading patient_id 25549
+[2020-11-19 19:53:38] INFO [xuetou:166] ThreadPoolExecutor-0_11 threading patient_id 25550
+[2020-11-19 19:54:20] INFO [xuetou:160] 25513 Save to mongo successfully!
+[2020-11-19 19:54:20] INFO [xuetou:166] ThreadPoolExecutor-0_7 threading patient_id 25551
+[2020-11-19 19:54:20] INFO [xuetou:160] 25304 Save to mongo successfully!
+[2020-11-19 19:54:20] INFO [xuetou:166] ThreadPoolExecutor-0_4 threading patient_id 25552
+[2020-11-19 19:54:21] INFO [xuetou:160] 25526 Save to mongo successfully!
+[2020-11-19 19:54:21] INFO [xuetou:166] ThreadPoolExecutor-0_8 threading patient_id 25553
+[2020-11-19 19:54:21] INFO [xuetou:160] 25545 Save to mongo successfully!
+[2020-11-19 19:54:21] INFO [xuetou:166] ThreadPoolExecutor-0_9 threading patient_id 25554
+[2020-11-19 19:54:26] INFO [xuetou:160] 24855 Save to mongo successfully!
+[2020-11-19 19:54:26] INFO [xuetou:166] ThreadPoolExecutor-0_3 threading patient_id 25555
+[2020-11-19 19:54:32] INFO [xuetou:160] 25550 Save to mongo successfully!
+[2020-11-19 19:54:32] INFO [xuetou:166] ThreadPoolExecutor-0_11 threading patient_id 25556
+[2020-11-19 19:54:32] INFO [xuetou:160] 25477 Save to mongo successfully!
+[2020-11-19 19:54:32] INFO [xuetou:166] ThreadPoolExecutor-0_5 threading patient_id 25557
+[2020-11-19 19:54:37] INFO [xuetou:160] 25506 Save to mongo successfully!
+[2020-11-19 19:54:37] INFO [xuetou:166] ThreadPoolExecutor-0_6 threading patient_id 25558
+[2020-11-19 19:54:46] INFO [xuetou:160] 25554 Save to mongo successfully!
+[2020-11-19 19:54:46] INFO [xuetou:166] ThreadPoolExecutor-0_9 threading patient_id 25559
+[2020-11-19 19:55:00] INFO [xuetou:160] 25553 Save to mongo successfully!
+[2020-11-19 19:55:00] INFO [xuetou:166] ThreadPoolExecutor-0_8 threading patient_id 25560
+[2020-11-19 19:55:06] INFO [xuetou:160] 25552 Save to mongo successfully!
+[2020-11-19 19:55:06] INFO [xuetou:160] 25551 Save to mongo successfully!
+[2020-11-19 19:55:11] INFO [xuetou:160] 23873 Save to mongo successfully!
+[2020-11-19 19:55:14] INFO [xuetou:160] 25558 Save to mongo successfully!
+[2020-11-19 19:56:14] INFO [xuetou:160] 10074 Save to mongo successfully!
+[2020-11-19 19:56:56] INFO [xuetou:160] 25559 Save to mongo successfully!
+[2020-11-19 19:57:27] INFO [xuetou:160] 25555 Save to mongo successfully!
+[2020-11-19 19:57:37] INFO [xuetou:160] 25557 Save to mongo successfully!
+[2020-11-19 19:57:55] INFO [xuetou:160] 7133 Save to mongo successfully!
+[2020-11-19 19:59:58] INFO [xuetou:160] 25560 Save to mongo successfully!
+[2020-11-19 20:14:13] INFO [main:28] Starting cycle: 1!
+[2020-11-19 20:14:13] INFO [xuetou:166] ThreadPoolExecutor-0_0 threading patient_id 7133
+[2020-11-19 20:14:22] INFO [xuetou:166] ThreadPoolExecutor-0_1 threading patient_id 10074
+[2020-11-19 20:14:22] INFO [xuetou:166] ThreadPoolExecutor-0_2 threading patient_id 23873
+[2020-11-19 20:14:22] INFO [xuetou:166] ThreadPoolExecutor-0_3 threading patient_id 24855
+[2020-11-19 20:14:22] INFO [xuetou:166] ThreadPoolExecutor-0_4 threading patient_id 25304
+[2020-11-19 20:14:22] INFO [xuetou:166] ThreadPoolExecutor-0_5 threading patient_id 25477
+[2020-11-19 20:14:22] INFO [xuetou:166] ThreadPoolExecutor-0_6 threading patient_id 25506
+[2020-11-19 20:14:23] INFO [xuetou:166] ThreadPoolExecutor-0_7 threading patient_id 25513
+[2020-11-19 20:14:23] INFO [xuetou:166] ThreadPoolExecutor-0_8 threading patient_id 25526
+[2020-11-19 20:14:23] INFO [xuetou:166] ThreadPoolExecutor-0_9 threading patient_id 25545
+[2020-11-19 20:14:23] INFO [xuetou:166] ThreadPoolExecutor-0_10 threading patient_id 25549
+[2020-11-19 20:14:23] INFO [xuetou:166] ThreadPoolExecutor-0_11 threading patient_id 25550
+[2020-11-19 20:14:35] INFO [xuetou:166] ThreadPoolExecutor-0_0 threading patient_id 1
+[2020-11-19 20:20:17] INFO [xuetou:173] ThreadPoolExecutor-0_0 threading patient_id 1
+[2020-11-19 20:23:26] INFO [xuetou:173] ThreadPoolExecutor-0_0 threading patient_id 25550
+[2020-11-19 20:23:55] INFO [xuetou:173] MainThread threading patient_id 25550
+[2020-11-19 20:24:08] INFO [xuetou:163] 25550 Save to mongo successfully!
+[2020-11-19 20:24:20] INFO [xuetou:173] ThreadPoolExecutor-0_0 threading patient_id 25550
+[2020-11-19 20:24:33] INFO [xuetou:163] 25550 Save to mongo successfully!
+[2020-11-19 20:25:09] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:27:25] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:28:36] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:31:11] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:32:12] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:32:26] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:34:01] INFO [xuetou:163] 2 Save to mongo successfully!
+[2020-11-19 20:34:03] INFO [xuetou:199] Done
+[2020-11-19 20:34:36] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:35:52] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:36:33] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:36:44] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:41:07] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:42:20] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:43:02] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:43:46] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:45:12] INFO [xuetou:173] MainThread threading patient_id 2
+[2020-11-19 20:45:13] INFO [xuetou:199] Done
+[2020-11-19 20:46:51] INFO [main:28] Starting cycle: 1!
+[2020-11-19 20:46:52] INFO [xuetou:173] ThreadPoolExecutor-0_0 threading patient_id 7133
+[2020-11-19 20:46:54] INFO [xuetou:173] ThreadPoolExecutor-0_1 threading patient_id 10074
+[2020-11-19 20:46:54] INFO [xuetou:173] ThreadPoolExecutor-0_2 threading patient_id 23873
+[2020-11-19 20:46:54] INFO [xuetou:173] ThreadPoolExecutor-0_3 threading patient_id 24855
+[2020-11-19 20:46:54] INFO [xuetou:173] ThreadPoolExecutor-0_4 threading patient_id 25304
+[2020-11-19 20:46:54] INFO [xuetou:173] ThreadPoolExecutor-0_5 threading patient_id 25477
+[2020-11-19 20:46:54] INFO [xuetou:173] ThreadPoolExecutor-0_6 threading patient_id 25506
+[2020-11-19 20:46:54] INFO [xuetou:173] ThreadPoolExecutor-0_7 threading patient_id 25513
+[2020-11-19 20:46:54] INFO [xuetou:173] ThreadPoolExecutor-0_8 threading patient_id 25526
+[2020-11-19 20:46:54] INFO [xuetou:173] ThreadPoolExecutor-0_9 threading patient_id 25545
+[2020-11-19 20:46:54] INFO [xuetou:199] Done
+[2020-11-19 20:46:54] INFO [xuetou:173] ThreadPoolExecutor-0_0 threading patient_id 25549
+[2020-11-19 20:46:55] INFO [xuetou:173] ThreadPoolExecutor-0_10 threading patient_id 25550
+[2020-11-19 20:46:55] INFO [xuetou:173] ThreadPoolExecutor-0_11 threading patient_id 25551
+[2020-11-19 20:46:55] INFO [xuetou:173] ThreadPoolExecutor-0_12 threading patient_id 25552
+[2020-11-19 20:46:55] INFO [xuetou:173] ThreadPoolExecutor-0_13 threading patient_id 25553
+[2020-11-19 20:46:55] INFO [xuetou:173] ThreadPoolExecutor-0_14 threading patient_id 25554
+[2020-11-19 20:46:55] INFO [xuetou:199] Done
+[2020-11-19 20:46:55] INFO [xuetou:173] ThreadPoolExecutor-0_0 threading patient_id 25555
+[2020-11-19 20:46:56] INFO [xuetou:199] Done
+[2020-11-19 20:46:56] INFO [xuetou:173] ThreadPoolExecutor-0_3 threading patient_id 25556
+[2020-11-19 20:46:56] INFO [xuetou:199] Done
+[2020-11-19 20:46:56] INFO [xuetou:173] ThreadPoolExecutor-0_1 threading patient_id 25557
+[2020-11-19 20:46:57] INFO [xuetou:199] Done
+[2020-11-19 20:46:57] INFO [xuetou:173] ThreadPoolExecutor-0_7 threading patient_id 25558
+[2020-11-19 20:46:57] INFO [xuetou:199] Done
+[2020-11-19 20:46:57] INFO [xuetou:173] ThreadPoolExecutor-0_6 threading patient_id 25559
+[2020-11-19 20:46:57] INFO [xuetou:199] Done
+[2020-11-19 20:46:57] INFO [xuetou:173] ThreadPoolExecutor-0_5 threading patient_id 25560
+[2020-11-19 20:46:57] INFO [xuetou:199] Done
+[2020-11-19 20:46:57] INFO [xuetou:199] Done
+[2020-11-19 20:46:57] INFO [xuetou:199] Done
+[2020-11-19 20:46:57] INFO [xuetou:199] Done
+[2020-11-19 20:46:57] INFO [xuetou:199] Done
+[2020-11-19 20:46:57] INFO [xuetou:199] Done
+[2020-11-19 20:46:57] INFO [xuetou:199] Done
+[2020-11-19 20:46:57] INFO [xuetou:199] Done
+[2020-11-19 20:46:57] INFO [xuetou:199] Done
+[2020-11-19 20:46:57] INFO [xuetou:199] Done
+[2020-11-19 20:46:58] INFO [xuetou:199] Done
+[2020-11-19 20:46:58] INFO [xuetou:199] Done
+[2020-11-19 20:46:59] INFO [xuetou:199] Done
+[2020-11-19 20:46:59] INFO [xuetou:199] Done
+[2020-11-19 20:47:00] INFO [xuetou:199] Done
+[2020-11-19 20:47:00] INFO [main:36] Cycle Done 1!
+[2020-11-19 20:48:20] INFO [main:28] Starting cycle 1!
+[2020-11-19 20:48:20] INFO [main:36] Cycle Done 1!
+[2020-11-19 20:49:25] INFO [xuetou:173] Thread-2 threading patient_id 2
+[2020-11-19 20:49:25] INFO [main:86] web搜索更新成功: patient_id=2
+[2020-11-19 20:50:12] INFO [xuetou:173] Thread-2 threading patient_id 2
+[2020-11-19 20:50:13] INFO [main:86] web搜索更新成功: patient_id=2
+[2020-11-19 20:52:22] INFO [main:25] Starting cycle 1!
+[2020-11-19 20:52:22] INFO [main:33] Cycle Done 1!
+[2020-11-19 20:53:21] INFO [main:25] Starting cycle 2!
+[2020-11-19 20:53:21] INFO [main:33] Cycle Done 2!
+[2020-11-19 20:54:20] INFO [main:25] Starting cycle 3!
+[2020-11-19 20:54:20] INFO [main:33] Cycle Done 3!
+[2020-11-19 20:55:19] INFO [main:25] Starting cycle 4!
+[2020-11-19 20:55:19] INFO [main:33] Cycle Done 4!
+[2020-11-19 20:56:18] INFO [main:25] Starting cycle 5!
+[2020-11-19 20:56:18] INFO [main:33] Cycle Done 5!
+[2020-11-19 20:57:17] INFO [main:25] Starting cycle 6!
+[2020-11-19 20:57:17] INFO [main:33] Cycle Done 6!
+[2020-11-19 20:58:16] INFO [main:25] Starting cycle 7!
+[2020-11-19 20:58:16] INFO [main:33] Cycle Done 7!
+[2020-11-19 20:59:15] INFO [main:25] Starting cycle 8!
+[2020-11-19 20:59:15] INFO [main:33] Cycle Done 8!
+[2020-11-19 21:00:14] INFO [main:25] Starting cycle 9!
+[2020-11-19 21:00:14] INFO [main:33] Cycle Done 9!
+[2020-11-19 21:01:13] INFO [main:25] Starting cycle 10!
+[2020-11-19 21:01:13] INFO [main:33] Cycle Done 10!
+[2020-11-19 21:02:12] INFO [main:25] Starting cycle 11!
+[2020-11-19 21:02:12] INFO [main:33] Cycle Done 11!
+[2020-11-19 21:03:11] INFO [main:25] Starting cycle 12!
+[2020-11-19 21:03:11] INFO [main:33] Cycle Done 12!
+[2020-11-19 21:04:10] INFO [main:25] Starting cycle 13!
+[2020-11-19 21:04:10] INFO [xuetou:173] ThreadPoolExecutor-12_0 threading patient_id 7133
+[2020-11-19 21:04:13] INFO [xuetou:173] Thread-2 threading patient_id 1
+[2020-11-19 21:04:14] INFO [main:83] web搜索更新成功: patient_id=1
+[2020-11-19 21:04:16] INFO [xuetou:173] ThreadPoolExecutor-12_0 threading patient_id 7314
+[2020-11-19 21:04:18] INFO [xuetou:173] ThreadPoolExecutor-12_1 threading patient_id 10074
+[2020-11-19 21:04:18] INFO [xuetou:173] ThreadPoolExecutor-12_2 threading patient_id 17904
+[2020-11-19 21:04:19] INFO [xuetou:173] ThreadPoolExecutor-12_3 threading patient_id 22499
+[2020-11-19 21:04:19] INFO [xuetou:173] ThreadPoolExecutor-12_4 threading patient_id 23606
+[2020-11-19 21:04:19] INFO [xuetou:173] ThreadPoolExecutor-12_5 threading patient_id 23873
+[2020-11-19 21:04:19] INFO [xuetou:173] ThreadPoolExecutor-12_6 threading patient_id 24855
+[2020-11-19 21:04:19] INFO [xuetou:173] ThreadPoolExecutor-12_7 threading patient_id 24960
+[2020-11-19 21:04:19] INFO [xuetou:173] ThreadPoolExecutor-12_8 threading patient_id 25304
+[2020-11-19 21:04:20] INFO [xuetou:173] ThreadPoolExecutor-12_9 threading patient_id 25462
+[2020-11-19 21:04:20] INFO [xuetou:173] ThreadPoolExecutor-12_10 threading patient_id 25477
+[2020-11-19 21:04:20] INFO [xuetou:173] ThreadPoolExecutor-12_11 threading patient_id 25488
+[2020-11-19 21:04:20] INFO [xuetou:173] ThreadPoolExecutor-12_12 threading patient_id 25506
+[2020-11-19 21:04:20] INFO [xuetou:173] ThreadPoolExecutor-12_13 threading patient_id 25513
+[2020-11-19 21:04:20] INFO [xuetou:173] ThreadPoolExecutor-12_14 threading patient_id 25526
+[2020-11-19 21:04:20] INFO [xuetou:173] ThreadPoolExecutor-12_0 threading patient_id 25545
+[2020-11-19 21:04:21] INFO [xuetou:173] ThreadPoolExecutor-12_1 threading patient_id 25547
+[2020-11-19 21:04:21] INFO [xuetou:173] ThreadPoolExecutor-12_2 threading patient_id 25548
+[2020-11-19 21:04:22] INFO [xuetou:173] ThreadPoolExecutor-12_6 threading patient_id 25549
+[2020-11-19 21:04:22] INFO [xuetou:173] ThreadPoolExecutor-12_5 threading patient_id 25550
+[2020-11-19 21:04:22] INFO [xuetou:173] ThreadPoolExecutor-12_8 threading patient_id 25551
+[2020-11-19 21:04:22] INFO [xuetou:173] ThreadPoolExecutor-12_12 threading patient_id 25552
+[2020-11-19 21:04:22] INFO [xuetou:173] ThreadPoolExecutor-12_6 threading patient_id 25553
+[2020-11-19 21:04:22] INFO [xuetou:173] ThreadPoolExecutor-12_13 threading patient_id 25554
+[2020-11-19 21:04:23] INFO [xuetou:173] ThreadPoolExecutor-12_10 threading patient_id 25555
+[2020-11-19 21:04:23] INFO [xuetou:173] ThreadPoolExecutor-12_13 threading patient_id 25556
+[2020-11-19 21:04:23] INFO [xuetou:173] ThreadPoolExecutor-12_14 threading patient_id 25557
+[2020-11-19 21:04:23] INFO [xuetou:173] ThreadPoolExecutor-12_11 threading patient_id 25558
+[2020-11-19 21:04:23] INFO [xuetou:173] ThreadPoolExecutor-12_13 threading patient_id 25559
+[2020-11-19 21:04:23] INFO [xuetou:173] ThreadPoolExecutor-12_1 threading patient_id 25560
+[2020-11-19 21:04:29] INFO [main:25] Starting cycle 1!
+[2020-11-19 21:04:29] INFO [xuetou:176] ThreadPoolExecutor-0_0 threading patient_id 7133
+[2020-11-19 21:04:35] INFO [xuetou:176] ThreadPoolExecutor-0_1 threading patient_id 7314
+[2020-11-19 21:04:37] INFO [xuetou:176] ThreadPoolExecutor-0_2 threading patient_id 10074
+[2020-11-19 21:04:37] INFO [xuetou:176] ThreadPoolExecutor-0_3 threading patient_id 17904
+[2020-11-19 21:04:37] INFO [xuetou:176] ThreadPoolExecutor-0_4 threading patient_id 22499
+[2020-11-19 21:04:37] INFO [xuetou:176] ThreadPoolExecutor-0_5 threading patient_id 23606
+[2020-11-19 21:04:37] INFO [xuetou:176] ThreadPoolExecutor-0_6 threading patient_id 23873
+[2020-11-19 21:04:37] INFO [xuetou:176] ThreadPoolExecutor-0_7 threading patient_id 24855
+[2020-11-19 21:04:37] INFO [xuetou:176] ThreadPoolExecutor-0_8 threading patient_id 24960
+[2020-11-19 21:04:37] INFO [xuetou:176] ThreadPoolExecutor-0_9 threading patient_id 25304
+[2020-11-19 21:04:38] INFO [xuetou:176] ThreadPoolExecutor-0_10 threading patient_id 25462
+[2020-11-19 21:04:38] INFO [xuetou:176] ThreadPoolExecutor-0_11 threading patient_id 25477
+[2020-11-19 21:04:38] INFO [xuetou:176] ThreadPoolExecutor-0_12 threading patient_id 25488
+[2020-11-19 21:04:38] INFO [xuetou:176] ThreadPoolExecutor-0_13 threading patient_id 25506
+[2020-11-19 21:04:38] INFO [xuetou:176] ThreadPoolExecutor-0_14 threading patient_id 25513
+[2020-11-19 21:04:55] INFO [xuetou:165] 25513 Save to mongo successfully!
+[2020-11-19 21:04:55] INFO [xuetou:176] ThreadPoolExecutor-0_14 threading patient_id 25526
+[2020-11-19 21:05:04] INFO [xuetou:165] 25488 Save to mongo successfully!
+[2020-11-19 21:05:04] INFO [xuetou:176] ThreadPoolExecutor-0_12 threading patient_id 25545
+[2020-11-19 21:05:09] INFO [xuetou:165] 24855 Save to mongo successfully!
+[2020-11-19 21:05:09] INFO [xuetou:176] ThreadPoolExecutor-0_7 threading patient_id 25547
+[2020-11-19 21:05:12] INFO [xuetou:165] 25462 Save to mongo successfully!
+[2020-11-19 21:05:12] INFO [xuetou:176] ThreadPoolExecutor-0_10 threading patient_id 25548
+[2020-11-19 21:05:12] INFO [xuetou:165] 22499 Save to mongo successfully!
+[2020-11-19 21:05:12] INFO [xuetou:176] ThreadPoolExecutor-0_4 threading patient_id 25549
+[2020-11-19 21:05:16] INFO [xuetou:165] 25477 Save to mongo successfully!
+[2020-11-19 21:05:16] INFO [xuetou:176] ThreadPoolExecutor-0_11 threading patient_id 25550
+[2020-11-19 21:05:18] INFO [xuetou:165] 17904 Save to mongo successfully!
+[2020-11-19 21:05:18] INFO [xuetou:176] ThreadPoolExecutor-0_3 threading patient_id 25551
+[2020-11-19 21:05:19] INFO [xuetou:165] 25304 Save to mongo successfully!
+[2020-11-19 21:05:19] INFO [xuetou:176] ThreadPoolExecutor-0_9 threading patient_id 25552
+[2020-11-19 21:05:31] INFO [xuetou:165] 25506 Save to mongo successfully!
+[2020-11-19 21:05:31] INFO [xuetou:176] ThreadPoolExecutor-0_13 threading patient_id 25553
+[2020-11-19 21:05:32] INFO [xuetou:165] 25545 Save to mongo successfully!
+[2020-11-19 21:05:32] INFO [xuetou:176] ThreadPoolExecutor-0_12 threading patient_id 25554
+[2020-11-19 21:05:35] INFO [xuetou:165] 25549 Save to mongo successfully!
+[2020-11-19 21:05:35] INFO [xuetou:176] ThreadPoolExecutor-0_4 threading patient_id 25555
+[2020-11-19 21:05:37] INFO [xuetou:165] 23606 Save to mongo successfully!
+[2020-11-19 21:05:37] INFO [xuetou:176] ThreadPoolExecutor-0_5 threading patient_id 25556
+[2020-11-19 21:05:41] INFO [xuetou:165] 25547 Save to mongo successfully!
+[2020-11-19 21:05:41] INFO [xuetou:176] ThreadPoolExecutor-0_7 threading patient_id 25557
+[2020-11-19 21:05:41] INFO [xuetou:165] 25548 Save to mongo successfully!
+[2020-11-19 21:05:41] INFO [xuetou:176] ThreadPoolExecutor-0_10 threading patient_id 25558
+[2020-11-19 21:05:41] INFO [xuetou:176] Thread-2 threading patient_id 1
+[2020-11-19 21:05:44] INFO [xuetou:165] 25550 Save to mongo successfully!
+[2020-11-19 21:05:44] INFO [xuetou:176] ThreadPoolExecutor-0_11 threading patient_id 25559
+[2020-11-19 21:05:57] INFO [xuetou:165] 25551 Save to mongo successfully!
+[2020-11-19 21:05:57] INFO [xuetou:165] 25552 Save to mongo successfully!
+[2020-11-19 21:05:57] INFO [xuetou:176] ThreadPoolExecutor-0_3 threading patient_id 25560
+[2020-11-19 21:06:00] INFO [xuetou:165] 25554 Save to mongo successfully!
+[2020-11-19 21:06:03] INFO [xuetou:165] 24960 Save to mongo successfully!
+[2020-11-19 21:06:04] INFO [xuetou:165] 25526 Save to mongo successfully!
+[2020-11-19 21:06:07] INFO [xuetou:165] 23873 Save to mongo successfully!
+[2020-11-19 21:06:08] INFO [xuetou:165] 25553 Save to mongo successfully!
+[2020-11-19 21:06:19] INFO [xuetou:165] 25558 Save to mongo successfully!
+[2020-11-19 21:06:40] INFO [xuetou:165] 25556 Save to mongo successfully!
+[2020-11-19 21:07:04] INFO [xuetou:165] 10074 Save to mongo successfully!
+[2020-11-19 21:07:55] INFO [xuetou:165] 1 Save to mongo successfully!
+[2020-11-19 21:07:55] INFO [main:83] web搜索更新成功: patient_id=1
+[2020-11-19 21:08:07] INFO [xuetou:165] 7314 Save to mongo successfully!
+[2020-11-19 21:08:17] INFO [xuetou:165] 25559 Save to mongo successfully!
+[2020-11-19 21:08:35] INFO [xuetou:165] 25555 Save to mongo successfully!
+[2020-11-19 21:08:35] INFO [xuetou:165] 25557 Save to mongo successfully!
+[2020-11-19 21:08:52] INFO [xuetou:165] 7133 Save to mongo successfully!
+[2020-11-19 21:10:10] INFO [xuetou:165] 25560 Save to mongo successfully!
+[2020-11-19 21:10:10] INFO [main:33] Cycle Done 1!
+[2020-11-19 21:10:10] INFO [main:25] Starting cycle 2!
+[2020-11-19 21:10:10] INFO [main:33] Cycle Done 2!
+[2020-11-19 21:10:46] INFO [main:25] Starting cycle 1!
+[2020-11-19 21:10:47] INFO [xuetou:176] ThreadPoolExecutor-0_0 threading patient_id 7133
+[2020-11-19 21:10:52] INFO [xuetou:176] ThreadPoolExecutor-0_1 threading patient_id 7314
+[2020-11-19 21:10:54] INFO [xuetou:176] ThreadPoolExecutor-0_2 threading patient_id 10074
+[2020-11-19 21:10:54] INFO [xuetou:176] ThreadPoolExecutor-0_3 threading patient_id 17904
+[2020-11-19 21:10:54] INFO [xuetou:176] ThreadPoolExecutor-0_4 threading patient_id 22499
+[2020-11-19 21:10:54] INFO [xuetou:176] ThreadPoolExecutor-0_5 threading patient_id 23606
+[2020-11-19 21:10:55] INFO [xuetou:176] ThreadPoolExecutor-0_6 threading patient_id 23873
+[2020-11-19 21:10:55] INFO [xuetou:176] ThreadPoolExecutor-0_7 threading patient_id 24855
+[2020-11-19 21:10:55] INFO [xuetou:176] ThreadPoolExecutor-0_8 threading patient_id 24960
+[2020-11-19 21:10:55] INFO [xuetou:176] ThreadPoolExecutor-0_9 threading patient_id 25304
+[2020-11-19 21:10:55] INFO [xuetou:176] ThreadPoolExecutor-0_10 threading patient_id 25462
+[2020-11-19 21:10:55] INFO [xuetou:176] ThreadPoolExecutor-0_11 threading patient_id 25477
+[2020-11-19 21:10:55] INFO [xuetou:176] ThreadPoolExecutor-0_12 threading patient_id 25488
+[2020-11-19 21:10:55] INFO [xuetou:176] ThreadPoolExecutor-0_13 threading patient_id 25506
+[2020-11-19 21:10:56] INFO [xuetou:176] ThreadPoolExecutor-0_14 threading patient_id 25513
+[2020-11-19 21:11:16] INFO [xuetou:165] 24960 Save to mongo successfully!
+[2020-11-19 21:11:16] INFO [xuetou:176] ThreadPoolExecutor-0_8 threading patient_id 25526
+[2020-11-19 21:11:23] INFO [xuetou:165] 25513 Save to mongo successfully!
+[2020-11-19 21:11:23] INFO [xuetou:176] ThreadPoolExecutor-0_14 threading patient_id 25545
+[2020-11-19 21:11:23] INFO [xuetou:165] 25506 Save to mongo successfully!
+[2020-11-19 21:11:23] INFO [xuetou:176] ThreadPoolExecutor-0_13 threading patient_id 25547
+[2020-11-19 21:11:25] INFO [xuetou:165] 25488 Save to mongo successfully!
+[2020-11-19 21:11:25] INFO [xuetou:176] ThreadPoolExecutor-0_12 threading patient_id 25548
+[2020-11-19 21:11:25] INFO [xuetou:165] 25462 Save to mongo successfully!
+[2020-11-19 21:11:25] INFO [xuetou:176] ThreadPoolExecutor-0_10 threading patient_id 25549
+[2020-11-19 21:11:28] INFO [xuetou:165] 24855 Save to mongo successfully!
+[2020-11-19 21:11:28] INFO [xuetou:176] ThreadPoolExecutor-0_7 threading patient_id 25550
+[2020-11-19 21:11:30] INFO [xuetou:165] 25477 Save to mongo successfully!
+[2020-11-19 21:11:30] INFO [xuetou:176] ThreadPoolExecutor-0_11 threading patient_id 25551
+[2020-11-19 21:11:32] INFO [xuetou:165] 23606 Save to mongo successfully!
+[2020-11-19 21:11:32] INFO [xuetou:176] ThreadPoolExecutor-0_5 threading patient_id 25552
+[2020-11-19 21:11:59] INFO [main:25] Starting cycle 1!
+[2020-11-19 21:11:59] INFO [main:84] web搜索更新开始：patient_id=1
+[2020-11-19 21:13:33] INFO [main:25] Starting cycle 1!
+[2020-11-19 21:13:33] INFO [main:84] web搜索更新开始：patient_id=1
+[2020-11-19 21:21:50] INFO [main:25] Starting cycle 1!
+[2020-11-19 21:21:50] INFO [main:82] web搜索更新开始：patient_id=1
+[2020-11-19 21:23:27] INFO [main:25] Starting cycle 1!
+[2020-11-19 21:23:27] INFO [main:83] web搜索更新开始：patient_id=1
+[2020-11-19 21:24:18] INFO [main:25] Starting cycle 1!
+[2020-11-19 21:24:18] INFO [xuetou:180] ThreadPoolExecutor-0_0 threading patient_id 7133
+[2020-11-19 21:24:24] INFO [xuetou:180] ThreadPoolExecutor-0_1 threading patient_id 7314
+[2020-11-19 21:24:26] INFO [xuetou:180] ThreadPoolExecutor-0_2 threading patient_id 10074
+[2020-11-19 21:24:26] INFO [xuetou:180] ThreadPoolExecutor-0_3 threading patient_id 17904
+[2020-11-19 21:24:26] INFO [xuetou:180] ThreadPoolExecutor-0_4 threading patient_id 22499
+[2020-11-19 21:24:26] INFO [xuetou:180] ThreadPoolExecutor-0_5 threading patient_id 23606
+[2020-11-19 21:24:26] INFO [xuetou:180] ThreadPoolExecutor-0_6 threading patient_id 23873
+[2020-11-19 21:24:27] INFO [xuetou:180] ThreadPoolExecutor-0_7 threading patient_id 24855
+[2020-11-19 21:24:27] INFO [xuetou:180] ThreadPoolExecutor-0_8 threading patient_id 24960
+[2020-11-19 21:24:27] INFO [xuetou:180] ThreadPoolExecutor-0_9 threading patient_id 25304
+[2020-11-19 21:24:27] INFO [xuetou:180] ThreadPoolExecutor-0_10 threading patient_id 25462
+[2020-11-19 21:24:27] INFO [xuetou:180] ThreadPoolExecutor-0_11 threading patient_id 25477
+[2020-11-19 21:24:27] INFO [xuetou:180] ThreadPoolExecutor-0_12 threading patient_id 25488
+[2020-11-19 21:24:27] INFO [xuetou:180] ThreadPoolExecutor-0_13 threading patient_id 25506
+[2020-11-19 21:24:27] INFO [xuetou:180] ThreadPoolExecutor-0_14 threading patient_id 25513
+[2020-11-19 21:24:54] INFO [xuetou:169] 25304 Save to mongo successfully!
+[2020-11-19 21:24:54] INFO [xuetou:180] ThreadPoolExecutor-0_9 threading patient_id 25526
+[2020-11-19 21:24:58] INFO [xuetou:169] 25488 Save to mongo successfully!
+[2020-11-19 21:24:58] INFO [xuetou:180] ThreadPoolExecutor-0_12 threading patient_id 25545
+[2020-11-19 21:24:58] INFO [xuetou:169] 25462 Save to mongo successfully!
+[2020-11-19 21:24:58] INFO [xuetou:180] ThreadPoolExecutor-0_10 threading patient_id 25547
+[2020-11-19 21:25:03] INFO [xuetou:169] 25477 Save to mongo successfully!
+[2020-11-19 21:25:03] INFO [xuetou:180] ThreadPoolExecutor-0_11 threading patient_id 25548
+[2020-11-19 21:25:03] INFO [xuetou:169] 25513 Save to mongo successfully!
+[2020-11-19 21:25:03] INFO [xuetou:180] ThreadPoolExecutor-0_14 threading patient_id 25549
+[2020-11-19 21:25:03] INFO [xuetou:169] 17904 Save to mongo successfully!
+[2020-11-19 21:25:03] INFO [xuetou:180] ThreadPoolExecutor-0_3 threading patient_id 25550
+[2020-11-19 21:25:23] INFO [xuetou:169] 25526 Save to mongo successfully!
+[2020-11-19 21:25:23] INFO [xuetou:180] ThreadPoolExecutor-0_9 threading patient_id 25551
+[2020-11-19 21:25:24] INFO [xuetou:169] 22499 Save to mongo successfully!
+[2020-11-19 21:25:24] INFO [xuetou:180] ThreadPoolExecutor-0_4 threading patient_id 25552
+[2020-11-19 21:25:28] INFO [xuetou:169] 25549 Save to mongo successfully!
+[2020-11-19 21:25:28] INFO [xuetou:180] ThreadPoolExecutor-0_14 threading patient_id 25553
+[2020-11-19 21:25:28] INFO [xuetou:169] 25506 Save to mongo successfully!
+[2020-11-19 21:25:28] INFO [xuetou:180] ThreadPoolExecutor-0_13 threading patient_id 25554
+[2020-11-19 21:25:28] INFO [xuetou:169] 25545 Save to mongo successfully!
+[2020-11-19 21:25:28] INFO [xuetou:180] ThreadPoolExecutor-0_12 threading patient_id 25555
+[2020-11-19 21:25:30] INFO [xuetou:169] 25547 Save to mongo successfully!
+[2020-11-19 21:25:30] INFO [xuetou:180] ThreadPoolExecutor-0_10 threading patient_id 25556
+[2020-11-19 21:25:31] INFO [xuetou:169] 25548 Save to mongo successfully!
+[2020-11-19 21:25:31] INFO [xuetou:180] ThreadPoolExecutor-0_11 threading patient_id 25557
+[2020-11-19 21:25:40] INFO [xuetou:169] 25550 Save to mongo successfully!
+[2020-11-19 21:25:40] INFO [xuetou:180] ThreadPoolExecutor-0_3 threading patient_id 25558
+[2020-11-19 21:25:46] INFO [xuetou:169] 24855 Save to mongo successfully!
+[2020-11-19 21:25:46] INFO [xuetou:180] ThreadPoolExecutor-0_7 threading patient_id 25559
+[2020-11-19 21:25:49] INFO [xuetou:169] 24960 Save to mongo successfully!
+[2020-11-19 21:25:49] INFO [xuetou:180] ThreadPoolExecutor-0_8 threading patient_id 25560
+[2020-11-19 21:25:54] INFO [xuetou:169] 23606 Save to mongo successfully!
+[2020-11-19 21:25:55] INFO [xuetou:169] 25554 Save to mongo successfully!
+[2020-11-19 21:25:56] INFO [xuetou:169] 23873 Save to mongo successfully!
+[2020-11-19 21:26:02] INFO [xuetou:169] 25551 Save to mongo successfully!
+[2020-11-19 21:26:02] INFO [xuetou:169] 25552 Save to mongo successfully!
+[2020-11-19 21:26:03] INFO [xuetou:169] 25553 Save to mongo successfully!
+[2020-11-19 21:26:20] INFO [xuetou:169] 25556 Save to mongo successfully!
+[2020-11-19 21:26:42] INFO [xuetou:169] 10074 Save to mongo successfully!
+[2020-11-19 21:26:53] INFO [xuetou:169] 25558 Save to mongo successfully!
+[2020-11-19 21:26:57] INFO [xuetou:169] 25555 Save to mongo successfully!
+[2020-11-19 21:26:59] INFO [xuetou:169] 25557 Save to mongo successfully!
+[2020-11-19 21:27:27] INFO [xuetou:169] 7314 Save to mongo successfully!
+[2020-11-19 21:27:28] INFO [xuetou:169] 25559 Save to mongo successfully!
+[2020-11-19 21:27:57] INFO [xuetou:169] 7133 Save to mongo successfully!
+[2020-11-19 21:29:09] INFO [xuetou:169] 25560 Save to mongo successfully!
+[2020-11-19 21:29:09] INFO [main:33] Cycle Done 1!
+[2020-11-19 21:29:09] INFO [main:25] Starting cycle 2!
+[2020-11-19 21:29:09] INFO [main:33] Cycle Done 2!
+[2020-11-19 21:30:08] INFO [main:25] Starting cycle 3!
+[2020-11-19 21:30:08] INFO [main:33] Cycle Done 3!

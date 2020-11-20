@@ -2,10 +2,12 @@
 import decimal
 import json
 import threading
-from concurrent.futures import ThreadPoolExecutor, ALL_COMPLETED, wait, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
-import time
 from datetime import datetime
+
+import requests
+
 from config.base_config import *
 from config.xue_config import *
 from data_structure.singleton_structure_content import new_content
@@ -25,19 +27,24 @@ import pymssql
 
 logger = getLogger('xuetou')
 
-client = pymongo.MongoClient(mongo_url)
-db = client[mongo_db]
-collection = db['BLOOD_Dialysis']
+# 数据存储
+client = pymongo.MongoClient(MONGO_HOST)
+db = client[MONGO_DB]
+collection = db[COLLECTION]
 # collection = db['origin']
 
 connect = pymssql.connect(host=host, port=port, user=user, password=password, database=database)
 cursor = connect.cursor()
+
+UPDATE_SUCCESS_IDS = []
 
 with open('config/jianyan_field.json', 'r') as f:
     jianyan_config = json.load(f)
 
 
 class XueTouData(object):
+    lock = threading.Lock()
+
     def __init__(self, connect):
         self.cursor = connect.cursor()
         self.data_source_code = 10704
@@ -154,14 +161,21 @@ def data_merge(content, data):
 
 
 def save_to_mongo(data):
+    modify_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    data.update({'modify_time': modify_time})
     if collection.update_one({'_id': data['_id']}, {'$set': data}, upsert=True):
         logger.info('%s Save to mongo successfully!' % data['_id'])
+        UPDATE_SUCCESS_IDS.append(data['_id'])
     else:
         logger.info('%s Data save mongo Failed!' % data['_id'])
 
 
+def post_data(data):
+    requests.post('', json=data)
+
+
 def main(pid, base_info, content):
-    print("%s threading is %s" % (threading.current_thread().name, pid))
+    logger.info("%s threading patient_id %s" % (threading.current_thread().name, pid))
 
     huayan = HuayanData().start(pid)
     content = data_merge(content, huayan)
@@ -186,15 +200,13 @@ def main(pid, base_info, content):
 
     lis_data = LisData(base_info, jianyan_config).start()
     if lis_data: data.update(lis_data)
-    print(data)
-    # save_to_mongo(data)
+    save_to_mongo(data)
 
 
 def multi_thread(id_list):
-    with ThreadPoolExecutor(max_workers=12) as executor:
-        logger.info('Start')
+    with ThreadPoolExecutor(max_workers=16) as executor:
         task_list = []
-        for pid in xuetou_50:
+        for pid in id_list:
             xuetou = XueTouData(connect)
             content, base_info = xuetou.start(pid)
 
@@ -202,11 +214,20 @@ def multi_thread(id_list):
             task_list.append(task)
         for future in as_completed(task_list):
             data = future.result()
-            print('*' * 50)
-        logger.info('End')
+
+        failed_ids = [id for id in id_list if id not in UPDATE_SUCCESS_IDS]
+        if failed_ids:
+            logger.warning('*******更新失败id: {}*******'.format(str(failed_ids)))
+
+
+def single_thread(pid):
+    xuetou = XueTouData(connect)
+    content, base_info = xuetou.start(pid)
+    main(pid, base_info, content)
 
 
 if __name__ == '__main__':
-    xuetou = XueTouData(connect)
-    content, base_info = xuetou.start('45')
-    main('45', base_info, content)
+    multi_thread(xuetou_id)
+    # single_thread(2)
+    # for id in xuetou_50:
+    #     single_thread(id)

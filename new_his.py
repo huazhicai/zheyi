@@ -1,4 +1,5 @@
 # 在requests headers中，禁用删除If - Modified-Since 和If-None-Natch 这两项
+import time
 
 import requests
 from utils.logger import getLogger
@@ -139,14 +140,13 @@ class NewHis(object):
         diagnose_response = requests.post(diagnose_url, headers=self.authorize, json=json_data)
         data = diagnose_response.json()
         diagnose_data = data['body']['diagnoses']
-        map_key = {1: '有', 2: '未确认'}
         if diagnose_data:
             main_diagnose = diagnose_data[0].get('mainDiagnose')
             if main_diagnose:
                 main_diagnose_data = {
                     30181: '主要诊断',
                     30134: main_diagnose['diagnoseName'],
-                    30132: map_key.get(main_diagnose['hospitalizedConditions']),
+                    30132: main_diagnose['hospitalizedConditions'],
                     30135: main_diagnose['diagnoseIcd'],
                 }
                 diagnoses_container.append(main_diagnose_data)
@@ -157,7 +157,7 @@ class NewHis(object):
                     diagnoses_container.append({
                         30181: '其他要诊断',
                         30134: sub_diagnose['diagnoseName'],
-                        30132: map_key.get(sub_diagnose['hospitalizedConditions']),
+                        30132: sub_diagnose['hospitalizedConditions'],
                         30135: sub_diagnose['diagnoseIcd'],
                     })
 
@@ -216,6 +216,85 @@ class NewHis(object):
         }
         return [fee]
 
+    def calculate_timestamp(self, int_data):
+        if isinstance(int_data, int):
+            timeArray = time.localtime(int_data / 1000)
+            dateStyleTime = time.strftime("%Y-%m-%d %H:%M:%S", timeArray)
+            return dateStyleTime
+
+    def make_up_time(self, data):
+        group = {}
+        for item in data:
+            if item['orderGroupNoUuid'] and item['orderStartDate']:
+                group[item['orderGroupNoUuid']] = {
+                    'orderStartDate': item['orderStartDate'],
+                    'stoppedByDate': item['stoppedByDate'],
+                    'firstConfirmedByNurseDate': item['firstConfirmedByNurseDate'],
+                    'stopConfirmedByNurseDate': item['stopConfirmedByNurseDate']
+                }
+        new_data = []
+        for item in data:
+            if not item['orderStartDate']:
+                item['orderStartDate'] = group[item['orderGroupNoUuid']]['orderStartDate']
+                item['stoppedByDate'] = group[item['orderGroupNoUuid']]['stoppedByDate']
+                item['firstConfirmedByNurseDate'] = group[item['orderGroupNoUuid']]['firstConfirmedByNurseDate']
+                item['stopConfirmedByNurseDate'] = group[item['orderGroupNoUuid']]['stopConfirmedByNurseDate']
+            new_data.append(item)
+        return new_data
+
+    def get_drug_use_record(self, data):
+        yizhu, koufu, zhenji = [], [], []
+        group = {}
+        for item in data:
+            if item['orderGroupNoUuid']:
+                if item['orderStartDate']:
+                    group[item['orderGroupNoUuid']] = {
+                        'orderStartDate': item['orderStartDate'],
+                        'stoppedByDate': item['stoppedByDate'],
+                        'firstConfirmedByNurseDate': item['firstConfirmedByNurseDate'],
+                        'stopConfirmedByNurseDate': item['stopConfirmedByNurseDate']
+                    }
+                else:
+                    item['orderStartDate'] = group[item['orderGroupNoUuid']]['orderStartDate']
+                    item['stoppedByDate'] = group[item['orderGroupNoUuid']]['stoppedByDate']
+                    item['firstConfirmedByNurseDate'] = group[item['orderGroupNoUuid']]['firstConfirmedByNurseDate']
+                    item['stopConfirmedByNurseDate'] = group[item['orderGroupNoUuid']]['stopConfirmedByNurseDate']
+
+            frequency = item['frequencyName'] or ''
+            ordertext = item['orderText'] or ''
+            yizhu.append({
+                30301: self.calculate_timestamp(item['orderStartDate']),
+                30302: ' '.join([ordertext, frequency]),
+                30303: self.calculate_timestamp(item['stoppedByDate'])
+            })
+
+            nurse_content = item['usageName']
+            if nurse_content and '口服' in nurse_content:
+                koufu.append({
+                    30501: self.calculate_timestamp(item['firstConfirmedByNurseDate']),
+                    30502: item['orderName'],
+                    30503: item['specification'],
+                    30504: item['onceDosage'],
+                    30505: item['frequencyName'],
+                    30506: item['usageName'],
+                    30507: item['totalNumUnit'],
+                    30508: 3,
+                    30509: self.calculate_timestamp(item['stopConfirmedByNurseDate'])
+                })
+            if '注' in item['orderText'] or '针' in item['orderText']:
+                zhenji.append({
+                    30601: self.calculate_timestamp(item['firstConfirmedByNurseDate']),
+                    30602: item['orderName'],
+                    30603: item['specification'],
+                    30604: item['onceDosage'],
+                    30605: item['frequencyName'],
+                    30606: item['usageName'],
+                    30607: item['totalNumUnit'],
+                    30608: 3,
+                    30609: self.calculate_timestamp(item['stopConfirmedByNurseDate'])
+                })
+        return yizhu, koufu, zhenji
+
     def get_yizhu(self, doc):
         url = self.host + '/app-nurse-station/patient/medical/record/order'
         json_data = {"inHospitalPatientId": doc['inhospitalPatientId'], "masterPatientIndex": doc['masterPatientIndex'],
@@ -226,40 +305,18 @@ class NewHis(object):
         source_data = response.json()
         data = source_data['body']
 
-        yizhu, koufu, zhenji = [], [], []
-        for item in data:
-            yizhu.append({
-                30301: item['exeTime'],
-                30302: item['orderText'],
-                30303: item['stopTime']
-            })
-
-            nurse_content = item['usageName']
-            if nurse_content and '口服' in nurse_content:
-                koufu.append({
-                    30501: item['exeTime'],
-                    30502: item['orderName'],
-                    30503: item['specification'],
-                    30504: item['onceDosage'],
-                    30505: item['frequencyName'],
-                    30506: item['usageName'],
-                    30507: item['totalNumUnit'],
-                    30508: 3,
-                    30509: item['stopTime']
-                })
-            if '注' in item['orderText'] or '针' in item['orderText']:
-                zhenji.append({
-                    30601: item['exeTime'],
-                    30602: item['orderName'],
-                    30603: item['specification'],
-                    30604: item['onceDosage'],
-                    30605: item['frequencyName'],
-                    30606: item['usageName'],
-                    30607: item['totalNumUnit'],
-                    30608: 3,
-                    30609: item['stopTime']
-                })
+        yizhu, koufu, zhenji = self.get_drug_use_record(data)
         return yizhu, koufu, zhenji
+
+    def get_temporary_doctor_advice(self, doc):
+        url = self.host + '/app-nurse-station/patient/medical/record/order'
+        json_data = {"inHospitalPatientId": doc['inhospitalPatientId'], "masterPatientIndex": doc['masterPatientIndex'],
+                     "orderType": "2", "openingType": 0, "orderCategoryList": ["1"]}
+        response = requests.post(url, headers=self.authorize, json=json_data)
+        source_data = response.json()
+        data = source_data['body']
+        _, koufu, zhenji = self.get_drug_use_record(data)
+        return koufu, zhenji
 
     def get_blbg(self, doc):
         url = self.host + '/app-sys-manage/personality/table/getStyle/8947/1581667331'
@@ -269,15 +326,20 @@ class NewHis(object):
             # assert None
 
     def get_xueyansuo(self, blh):
-        from zhuyuan import xueyansuo
-        xueyansuo = xueyansuo(blh)
-        return xueyansuo
+        if blh:
+            from zhuyuan import xueyansuo
+            xueyansuo = xueyansuo(blh)
+            return xueyansuo
+        return []
 
     def start(self):
         patient_name = self.source_info[3]
         blh = self.source_info[1]
-        record_by_name = self.search_patient(patient_name)
-        record_by_blh = self.search_patient(blh)
+
+        record_by_name = []
+        record_by_blh = []
+        if patient_name: record_by_name = self.search_patient(patient_name)
+        if blh: record_by_blh = self.search_patient(blh)
         records = quchong(record_by_name + record_by_blh)
 
         binganshouye = []
@@ -292,10 +354,15 @@ class NewHis(object):
                 })
                 binganshouye.append(patientinfo)
                 yizhu, koufu, zhenji = self.get_yizhu(item)
+                koufu_temporary, zhenji_temporary = self.get_temporary_doctor_advice(item)
                 yizhu_s.extend(yizhu)
                 koufu_s.extend(koufu)
+                koufu_s.extend(koufu_temporary)
                 zhenji_s.extend(zhenji)
+                zhenji_s.extend(zhenji_temporary)
+
                 self.get_blbg(item)
+
         xueyansuo = self.get_xueyansuo(blh)
 
         result = {
@@ -310,7 +377,7 @@ class NewHis(object):
 
 
 if __name__ == '__main__':
-    login()
-    args = ('330106197504042418', '04386749', '', '杨一军', '1975-04-04')
+    # login()
+    args = ('362323198401133623', '2000046248', '', '张桃芬', '1984-01-13')
     instance = NewHis(args)
     instance.start()
