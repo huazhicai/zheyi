@@ -161,6 +161,7 @@ def data_merge(content, data):
 
 
 def save_to_mongo(data):
+    print(data)
     modify_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     data.update({'modify_time': modify_time})
     if collection.update_one({'_id': data['_id']}, {'$set': data}, upsert=True):
@@ -204,7 +205,7 @@ def main(pid, base_info, content):
 
 
 def multi_thread(id_list):
-    with ThreadPoolExecutor(max_workers=16) as executor:
+    with ThreadPoolExecutor(max_workers=20) as executor:
         task_list = []
         for pid in id_list:
             xuetou = XueTouData(connect)
@@ -227,7 +228,7 @@ def single_thread(pid):
 
 
 if __name__ == '__main__':
-    multi_thread(xuetou_id)
-    # single_thread(2)
+    # multi_thread(xuetou_id)
+    single_thread(22155)
     # for id in xuetou_50:
     #     single_thread(id)

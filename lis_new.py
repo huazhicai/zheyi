@@ -42,10 +42,12 @@ class LisData(object):
         return out_data
 
     def get_test_results(self):
+        sample_map_results = {}
+
         input_array = self.get_base_info()
         samples = [i['sample'] for i in input_array if len(i['sample']) > 5]
         if len(samples) == 0:
-            return []
+            return sample_map_results
 
         # 当样本号超过1000时，oracle 有限制
         sample_assemble = []
@@ -62,7 +64,6 @@ class LisData(object):
         for samps in sample_assemble:
             test_results.extend(self.fetch(DETAIL_SQL.format(tuple(samps))))
 
-        sample_map_results = {}
         for result in test_results:
             if sample_map_results.get(result['sample']):
                 sample_map_results[result['sample']].append(result)
