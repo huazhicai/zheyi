@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+    <link rel="icon" type="image/png" href="/front/images/favicon.png">
+    <meta name="viewport" content="width=device-width">
+    <title>浙大一院</title>
+  	<link rel="preload" href="/front/js/react-production.js" as="script">
+    <link rel="preload" href="/future-his-portal-web/0.6.29/js/index.js" as="script">
+  
+    <link rel="stylesheet" href="/front/css/animate.css" />
+    <link href="/future-his-portal-web/0.6.29/css/index.css" rel="stylesheet">
+    <object id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0
+        style="position: absolute;">
+        <embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0></embed>
+    </object>
+  	<script id="seenew-felog"  data-track="//172.30.75.164:7001/frondent/log/batch/upload" src="/front/js/felog.js"></script>
+    <script src="/front/js/qwebchannel.js"></script>
+    <script src="/front/js/lodop/lodopFuncs.js"></script>
+    <script>
+        (function () {
+            window.LODOP = getLodop();
+          	window.__public_env__ = 'zheyi';
+            window.__portal_version__ = '0.6.29';
+      		window.dingToken = '56c896bf32899efa48259f9b77abd180898ff08820811578494a1f9666075c7d';
+            
+           	var hospitalDistrictId = sessionStorage.getItem('hospitalDistrictId')
+            var ZheyiYuhangDistrictId = '12416';
+
+      		window.systemAk = 'at4ljR0vAahQUrqXlFAK';
+            window.__webpack_public_path__ = '';
+            window.appsConfigDynamic = {
+  "/": "future-hit/future-his-login@1.0.16",
+  "/basis": "future-hit/future-his-sysmanager-web@1.0.27",
+  "/medicine": "future-hit/future-his-medicinemanager-web@0.1.0",
+  "/bill": "future-hit/future-his-billManager-web@0.1.0",
+  "/schedule": "future-hit/future-his-schedulemanage-web@0.1.0",
+  "/patients": "future-hit/patient-front-end@1.0.27@local",
+  "/insurance": "future-hit/future-his-InsuranceManagement-web@1.0.3",
+  "/doctorAdvice": "future-hit/doctors-station-front-end@0.1.0",
+  "/costManage": "future-hit/future-his-hospitalizedCostManage-web@0.1.0",
+  "/doctorStation": "future-hit/future-his-doctorStation-web@1.0.15@local",
+  "/doctorStationSetting": "future-hit/future-his-doctorStationSetting-web@1.0.4",
+  "/nurseStation": "future-hit/nurse-station-front-end@0.1.0",
+  "/appointmentAndRegister": "future-hit/future-his-appointmentAndRegister-web@0.1.0",
+  "/newOutpatientSettlement": "future-hit/new-outpatient-settlement@2.0.6",
+  "/dischargeSettlement": "future-hit/future-his-dischargeSettlement-web@0.1.0",
+  "/medicalBasic": "future-hit/future-medical-couplet-basic-setting@0.1.0",
+  "/surgicalAnesthesia": "future-hit/future-his-surgicalAnesthesia-web@0.1.0",
+  "/clinicalPathway": "future-hit/future-his-clinicalPathway-web@1.0.3",
+  "/adverseEvent": "future-his-qc/adverse-event-front-end@0.1.0",
+  "/notify": "future-hit/notify-front-end@0.1.0",
+  "/setting": "future-hit/future-his-systemparametersetting-web@0.1.0",
+  "/systemSetting": "future-hit/future-his-systemSetting@0.1.0@local",
+  "/lisManager": "future-hit/future-lisManager@1.0.14@local",
+  "/lisBasic": "future-hit/future-lisBasic@1.0.12@local",
+  "/dispensing": "future-hit/future-his-dispensingManage-web@0.1.0",
+  "/billing": "future-his-costcenter/billing-front-end@1.0.1",
+  "/medicalRecord": "future-hit/future-his-medicalRecord-web@1.0.21",
+  "/blood": "future-hit/future-his-blood-web@1.0.30",
+  "/upgradeNurseStation": "future-hit/upgrade-nurse-station-front-end@1.0.132@local",
+  "/emrSystemSetting": "future-hit/future-his-emrSystemSeting@0.1.0@local",
+  "/newDoctorStation": "future-hit/future-his-newDoctorStation-web@1.0.167@local",
+  "/surgery": "future-hit/surgery-front-end@1.0.37",
+  "/newBillManage": "future-hit/future-his-newBillManage-web@0.1.3",
+  "/newInpationtManage": "future-hit/future-his-newEnterhospital-web@2.0.32",
+  "/emergency": "future-hit/future-his-EmergencyTriage-web@1.0.31",
+  "/basisSystemSetting": "future-hit/future-his-basisSystemSetting@1.2.0",
+  "/newDispensingManage": "future-hit/future-his-newDispensingManage-web@1.0.144",
+  "/newDispensingManageLow": "future-hit/future-his-newDispensingManage-web-low-frequency@1.0.24",
+  "/newMedicinemanager": "future-hit/future-his-newMedicinemanager-web@1.0.58",
+  "/print": "future-hit/future-his-printManage-web@1.0.5",
+  "/newDischargeSettlement": "future-hit/future-his-newDischargeSettlement-web@2.0.32",
+  "/SettlementReport": "future-hit/future-his-SettlementReport-web@1.0.14",
+  "/newInsurance": "future-hit/new-insurance-web@2.0.3",
+  "/technology": "future-hit/future-his-medicaltechnologysystem-web@0.1.0",
+  "/newtechnology": "future-hit/newmedicaltechnologysystem-web@1.0.60",
+  "/schedulemanage": "future-hit/schedual@2.0.17",
+  "/radinfopacs": "future-hit/future-pacs@0.1.0@local",
+  "/newappointmentAndRegister": "future-hit/register@2.0.57",
+  "/insuranceCostControl": "future-hit/insurance-cost-control-web@0.1.0",
+  "/admission": "future-hit/Admissionpreparationcenter@1.3.61",
+  "/dicBaseSet": "future-hit/future-hit-dictionaryBaseSetting@0.2.15",
+  "/materialManage": "future-hit/future-his-Material-web@0.1.0",
+  "/billCenter": "future-hit/future-his-billCenter-web@0.1.0",
+  "/followup": "future-hit/future-his-visit-web@0.1.0",
+  "/DietManagement": "future-hit/future-hit-diet-management@1.0.11",
+  "/vteManage": "future-hit/future-his-vte-manage@0.0.15",
+  "/newBasis": "future-hit/future-his-newSystemManage-web@1.4.27",
+  "/userSetting": "future-hit/user-setting@6.0.0",
+  "/newSurgicalAnesthesia": "future-hit/future-his-newSurgicalAnesthesia-web@1.0.31",
+  "/qualityControl": "future-hit/future-his-qualityControl-web@1.0.12",
+  "/publicHealth": "future-hit/public-health-web@0.1.0",
+  "/biReports": "future-hit/biReports@1.0.24",
+  "/familyDoctorSign": "future-hit/future-his-familyDoctorSign@0.1.0",
+  "/emergencyNurseStation": "future-hit/emergency-nurse-station-front-end@0.1.0",
+  "/emergencyTriageRefund": "future-hit/future-his-emergency-triage-refund-web@0.0.6",
+  "/webDictCommonManage": "future-hit/future-dict-dictManage@0.1.0",
+  "/outpatientNurseStation": "future-hit/future-his-outpatientNurseStation@1.0.0",
+  "/labBasis": "future-hit/future-his-labBasis-web@0.1.0@local",
+  "/shiftChange": "future-hit/future-his-shift-change@0.8.1",
+  "/materialsCenter": "future-hit/future-his-materials-center-web@0.1.0",
+  "/labInfo": "future-hit/future-his-labInfo-web@0.1.0@local",
+  "/labQC": "future-hit/future-his-labQC-web@0.1.0@local",
+  "/lisReport": "future-hit/future-lisReport@1.0.1",
+  "/icuPatientManage": "future-hit/future-his-icuPatientManage-web@0.1.0@local",
+  "/icuDailyNursing": "future-hit/future-his-icuDailyNursing-web@0.1.0@local",
+  "/icuSystemSetting": "future-hit/future-his-icuSystemSetting-web@0.1.0@local",
+  "/icuWriterPrint": "future-hit/future-his-icuWriterPrint-web@0.1.0@local",
+  "/icuStatisticAnalysis": "future-hit/future-his-icuStatisticAnalysis-web@0.1.0@local",
+  "/outpatientSchedule": "future-hit/future-his-outpatientSchedule@1.0.0",
+  "/zyqcDoctorStation": "future-hit/future-his-zyqcDoctorStation-web@1.0.8",
+  "/self-printing": "future-hit/self-tag-printing@1.0.3",
+  "/nurseReportCard": "future-hit/future-his-reportCard-end@1.0.0",
+  "/newNurseStation": "future-hit/new-nurse-station-front-end@1.0.0"
+};
+
+        }());
+      window['lqq'] = "0x7365656e657740313233";
+    </script>
+</head>
+
+<body>
+    <div id="ice-container"></div>
+    <script>window.hasFetchLoading = true;</script>
+  	<script src="/front/js/react-production.js"></script>
+    <script src="/future-his-portal-web/0.6.29/js/index.js"></script>
+  
+  	<script type="text/javascript">
+    (function () {
+      window.FELOG_MAX_API_LATENCY = 1200;
+      window.FELOG_ENABLE_APIS=['new-read-card'];
+    })();
+  	</script>
+</body>
+
+</html>

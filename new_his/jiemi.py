@@ -3,7 +3,7 @@
 from Crypto.Cipher import AES
 import base64
 
-from new_his.word import word
+# from new_his.word import word
 
 
 class AesCrypt():
@@ -33,9 +33,9 @@ class AesCrypt():
 
 
 if __name__ == '__main__':
-    key = '1234567890123456'
+    key = '{*FIRST_CRYPTO_KEY_DEV*}'
     iv = '1234567890123456'
-    # word = 'wU/2oHphdJ5qzRQh9AltsQ=='
+    word = 'wU/2oHphdJ5qzRQh9AltsQ=='
 
     model = 'CBC'
     pr = AesCrypt(key, model, iv)
