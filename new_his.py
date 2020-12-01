@@ -2,6 +2,8 @@
 import time
 
 import requests
+from jsonpath import jsonpath
+from utils.decrypt_data import decrypt_data
 from utils.logger import getLogger
 from utils.crack_password import crack_pwd
 from utils.util import filter_data, quchong
@@ -54,6 +56,8 @@ class NewHis(object):
         self.authorize = {'Authorization': 'Bearer {}'.format(ACCESS_TOKEN),
                           'k2': K2,
                           'k1': K1,
+                          'deptcode': K2,
+                          'hospitalNo': K1
                           }
 
     def get_request(self):
@@ -318,6 +322,48 @@ class NewHis(object):
         _, koufu, zhenji = self.get_drug_use_record(data)
         return koufu, zhenji
 
+    def get_inhospital_record(self, doc):
+        url = self.host + '/app-emr/MrFile/history'
+        params = {
+            'patientId': doc['patientRegisterId'],
+            'visitId': '2',
+            'deptCode': self.authorize['deptcode'],
+            'fileVisitType': '2',
+            'appClass': 'INPAT_DOCT',
+        }
+        response = requests.get(url, headers=self.authorize, params=params)
+        data = response.json()
+        data = data.get('body')
+        file_unique_id = None
+        for item in data:
+            if item['masterPatientIndex'] == doc['masterPatientIndex']:
+                file_unique_id = item['fileUniqueId']
+                break
+
+        if file_unique_id:
+            url = self.host + '/app-emr/MrFile/singleFile/?fileUniqueId={}'.format(file_unique_id)
+            response = requests.get(url, headers=self.authorize)
+            result = response.json()
+            data = decrypt_data(result['body'].get('mrContent'))
+            shijian = jsonpath(data,
+                               '$.editorValue.document.nodes[1].nodes[2].nodes[4].nodes[1].nodes[0].nodes[1].data.data.value')
+            zhusu = jsonpath(data, '$.editorValue.document.nodes[1].nodes[3].nodes[2].leaves[0].text')
+            xianshi = jsonpath(data, '$.editorValue.document.nodes[1].nodes[4].nodes[2].leaves[0].text')
+            jiwangshi = jsonpath(data, 'editorValue.document.nodes[1].nodes[5].nodes[2].leaves[1].text')
+            gerenshi = jsonpath(data, 'editorValue.document.nodes[1].nodes[6].nodes[2].leaves[1].text')
+            hunyushi = jsonpath(data, 'editorValue.document.nodes[1].nodes[7].nodes[2].leaves[1].text')
+            jiazushi = jsonpath(data, 'editorValue.document.nodes[1].nodes[8].nodes[2].leaves[1].text')
+
+            gerenbingshi = {30207: shijian[0],
+                            30201: zhusu[0],
+                            30202: xianshi[0],
+                            30203: jiwangshi[0],
+                            30204: gerenshi[0],
+                            30205: hunyushi[0],
+                            30206: jiazushi[0],
+                            }
+            return gerenbingshi
+
     def get_blbg(self, doc):
         url = self.host + '/app-sys-manage/personality/table/getStyle/8947/1581667331'
         response = requests.post(url, headers=self.authorize)
@@ -345,6 +391,7 @@ class NewHis(object):
         binganshouye = []
         yizhu_s, zhenji_s, koufu_s = [], [], []
         for item in records:
+            self.get_inhospital_record(item)
             patientinfo, checked_id = self.check_patient(item)
             if checked_id:
                 patientinfo.update({
@@ -378,6 +425,6 @@ class NewHis(object):
 
 if __name__ == '__main__':
     # login()
-    args = ('362323198401133623', '2000046248', '', '张桃芬', '1984-01-13')
+    args = ('362323198401133623', '2000046248', '', '相樟生', '1984-01-13')
     instance = NewHis(args)
     instance.start()

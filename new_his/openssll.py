@@ -1,3 +1,4 @@
+import json
 from base64 import b64decode, b64encode
 from binascii import hexlify
 from Crypto.Cipher import AES
@@ -9,31 +10,33 @@ encrypted = b64decode(encoded)
 salt = encrypted[8:16]
 data = encrypted[16:]
 
-
 # We need 32 bytes for the AES key, and 16 bytes for the IV
-def openssl_kdf(req):
-    prev = ''
-    while req > 0:
-        prev = MD5.new(prev + secret + salt).digest()
-        req -= 16
-        yield prev
+with open('zhusu.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
 
+id = []
+xuyao = []
+for i in data['body']:
+    ids = i['fileUniqueId']
+    if ids in id:
+        xuyao.append(ids)
+    id.append(ids)
 
-mat = ''.join([x for x in openssl_kdf(32 + 16)])
-key = mat[0:32]
-iv = mat[32:48]
+print(xuyao)
 
-dec = AES.new(key, AES.MODE_CBC, iv)
-clear = dec.decrypt(data)
+json_data = {
+    'patientId': '222968',
+    'visitId': '2',
+    'deptCode': '12472',
+    'fileVisitType': '2',
+    'appClass': 'INPAT_DOCT',
+    'patientRegisterId': '222968',
+    'masterPatientIndex': 'b92cde680ffb4bd5a02456dd474b188c',
+    'orgId': '1',
+    'inhospitalPatientId': '139282',
+    'outpatientId': '-1',
+    'patientName': '相樟生',
+    'bedLabel': '7',
+    'bedNo': '7',
 
-try:
-    salt_hex = ''.join(["%X" % ord(c) for c in salt])
-    print('salt:     %s' % salt_hex)
-    print('expected: %s' % 'B898FE40EC8155FD')
-    print('key:      %s' % hexlify(key).upper())
-    print('expected: %s' % '4899E518743EB0584B0811AE559ED8AD9F0B5FA31B0B998FEB8453B8E3A7B36C')
-    print('iv:       %s' % hexlify(iv).upper())
-    print('expected: %s' % 'EFA6105F30F6C462B3D135725A6E1618')
-    print('result:   %s' % clear)
-except UnicodeDecodeError:
-    print('decryption failed')
+}
